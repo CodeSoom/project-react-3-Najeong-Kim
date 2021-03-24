@@ -15,7 +15,7 @@ export default function App() {
       <h1><Link to="/">Vitamin Y</Link></h1>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/choice" component={ChoicePage} />
+        <Route exact path="/choice/:id" component={ChoicePage} />
       </Switch>
     </div>
   );
