@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <h2>Home</h2>
-      <Link to="/choice">Start</Link>
+      <Link to="/choice/1">Start</Link>
     </div>
   );
 }
