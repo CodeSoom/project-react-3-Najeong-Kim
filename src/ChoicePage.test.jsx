@@ -2,7 +2,7 @@ import React from 'react';
 
 import { fireEvent, render } from '@testing-library/react';
 
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 
 import ChoicePage from './ChoicePage';
 
@@ -19,7 +19,7 @@ describe('ChoicePage', () => {
   function renderChoicePage({ path }) {
     return render((
       <MemoryRouter initialEntries={[path]}>
-        <ChoicePage />
+        <Route exact path="/choice/:id" component={ChoicePage} />
       </MemoryRouter>
     ));
   }
@@ -28,7 +28,7 @@ describe('ChoicePage', () => {
     it('listens click event', () => {
       const { getByText } = renderChoicePage({ path: '/choice/1' });
 
-      fireEvent.click(getByText(/실내에서/));
+      fireEvent.click(getByText(/오랫동안/));
 
       expect((mockHistory.push)).toBeCalled();
     });

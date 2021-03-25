@@ -26,7 +26,7 @@ describe('App', () => {
 
   context('with path /choice/:id', () => {
     it('renders the choice page', () => {
-      const { container } = renderApp({ path: '/choice/:id' });
+      const { container } = renderApp({ path: '/choice/1' });
 
       expect(container).toHaveTextContent('Choice');
     });
