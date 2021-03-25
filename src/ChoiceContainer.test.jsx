@@ -4,11 +4,19 @@ import { fireEvent, render } from '@testing-library/react';
 
 import ChoiceContainer from './ChoiceContainer';
 
+import choiceData from '../fixtures/choiceData';
+
 describe('ChoicePage', () => {
   const handleClick = jest.fn();
 
-  function renderChoiceContainer() {
-    return render(<ChoiceContainer onClick={handleClick} />);
+  function renderChoiceContainer({ question, choices } = {}) {
+    return render(
+      <ChoiceContainer
+        question={question}
+        choices={choices}
+        onClick={handleClick}
+      />,
+    );
   }
 
   beforeEach(() => {
@@ -17,9 +25,9 @@ describe('ChoicePage', () => {
 
   context('clicks a choice button', () => {
     it('listens click event', () => {
-      const { getByText } = renderChoiceContainer();
+      const { getByText } = renderChoiceContainer(choiceData[0].text);
 
-      fireEvent.click(getByText(/실내에서/));
+      fireEvent.click(getByText('1번 선택'));
       expect(handleClick).toBeCalled();
     });
   });
