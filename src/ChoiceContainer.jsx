@@ -1,18 +1,29 @@
 import React from 'react';
 
-export default function ChoiceContainer({ question, choices, onClick }) {
+import { useDispatch } from 'react-redux';
+
+import { selectChoice } from './actions';
+
+export default function ChoiceContainer({ question, choices, onChoiceClick }) {
+  const dispatch = useDispatch();
+
+  function handleClick(choiceId) {
+    dispatch(selectChoice(choiceId));
+    onChoiceClick();
+  }
+
   return (
     <div>
       <h2>Choice</h2>
       <h3>{question}</h3>
       <ul>
-        {choices?.map((choice) => (
-          <li key={choice.id}>
+        {choices.map((choice) => (
+          <li key={choice.choiceId}>
             <button
               type="button"
-              onClick={onClick}
+              onClick={() => handleClick(choice.choiceId)}
             >
-              {choice.text}
+              {choice.choiceText}
             </button>
           </li>
         ))}

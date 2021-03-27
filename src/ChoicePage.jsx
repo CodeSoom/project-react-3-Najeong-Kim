@@ -12,7 +12,10 @@ export default function ChoicePage() {
   const { question, choices } = choiceData[Number(id) - 1].text;
 
   function handleClick() {
-    history.push(`/choice/${Number(id) + 1}`);
+    if (Number(id) < 9) {
+      return history.push(`/choice/${Number(id) + 1}`);
+    }
+    return history.push('/result');
   }
 
   return (
@@ -20,7 +23,7 @@ export default function ChoicePage() {
       <ChoiceContainer
         question={question}
         choices={choices}
-        onClick={handleClick}
+        onChoiceClick={handleClick}
       />
     </div>
   );
