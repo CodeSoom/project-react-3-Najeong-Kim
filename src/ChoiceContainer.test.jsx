@@ -2,19 +2,28 @@ import React from 'react';
 
 import { fireEvent, render } from '@testing-library/react';
 
+import { useDispatch } from 'react-redux';
+
 import ChoiceContainer from './ChoiceContainer';
 
 import choiceData from '../fixtures/choiceData';
 
-describe('ChoicePage', () => {
+describe('ChoiceContainer', () => {
+  const dispatch = jest.fn();
   const handleClick = jest.fn();
+
+  beforeEach(() => {
+    dispatch.mockClear();
+
+    useDispatch.mockImplementation(() => dispatch);
+  });
 
   function renderChoiceContainer({ question, choices } = {}) {
     return render(
       <ChoiceContainer
         question={question}
         choices={choices}
-        onClick={handleClick}
+        onChoiceClick={handleClick}
       />,
     );
   }

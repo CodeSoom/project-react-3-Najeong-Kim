@@ -5,14 +5,14 @@ const choiceData = [
       question: '질문?',
       choices: [
         {
-          id: 1,
-          text:
+          choiceId: 1,
+          choiceText:
             '1번 선택'
           ,
         },
         {
-          id: 2,
-          text:
+          choiceId: 2,
+          choiceText:
             '2번 선택'
           ,
         },
