@@ -8,6 +8,7 @@ import {
 
 import HomePage from './HomePage';
 import ChoicePage from './ChoicePage';
+import ResultPage from './ResultPage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/choice/:id" component={ChoicePage} />
+        <Route exact path="/result" component={ResultPage} />
       </Switch>
     </div>
   );
