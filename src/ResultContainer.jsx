@@ -6,6 +6,31 @@ import { get } from './utils';
 
 import { selectResult } from './actions';
 
+import styled from '@emotion/styled';
+
+const Container = styled.div({
+  textAlign: 'center',
+  backgroundColor: 'white',
+})
+
+const List = styled.ul({
+  listStyle: 'none',
+  margin: '0',
+  padding: '10px',
+  backgroundColor: 'white',
+})
+
+const Item = styled.li({
+  backgroundColor: 'white',
+})
+
+const ResultItem = styled.p({
+  backgroundColor: 'white',
+  color: '#737B7D',
+  fontSize: '18px',
+})
+
+
 export function calculateResult(selects, result, number, points) {
   if (selects[points[0]] + selects[points[1]] + selects[points[2]] < 5) {
     return result[number] = 'A';
@@ -45,12 +70,16 @@ export default function ResultContainer() {
   }, []);
 
   return (
-    <div>
-      <ul>
+    <Container>
+      <List>
         {answer?.text?.results.map(({ resultId, resultText }) => (
-          <li key={resultId}>{resultText}</li>
+          <Item key={resultId}>
+            <ResultItem>
+              {resultText}
+            </ResultItem>
+          </Item>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Container>
   );
 }
