@@ -2,8 +2,26 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
 import Title from './styles/Title';
 import Text from './styles/Text';
+
+const Start = styled.div({
+  marginTop: '40px',
+  textAlign: 'center',
+  '& a': {
+    fontSize: '25px',
+    color: 'white',
+    textDecoration: 'none',
+    backgroundColor: '#F2C94C',
+    padding: '8px 15px',
+    borderRadius: '10px',
+    '&:hover': {
+      backgroundColor: '#FFB61D',
+    },
+  },
+});
 
 export default function HomePage() {
   return (
@@ -20,7 +38,7 @@ export default function HomePage() {
         <br />
         (시작 전 새로고침을 한 번 해주세요!)
       </Text>
-      <Link to="/choice/1">Start</Link>
+      <Start><Link to="/choice/1">Start</Link></Start>
     </div>
   );
 }
