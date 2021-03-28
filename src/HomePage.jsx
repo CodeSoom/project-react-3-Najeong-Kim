@@ -3,12 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Title from './styles/Title';
+import Text from './styles/Text';
 
 export default function HomePage() {
   return (
     <div>
       <Title>Home</Title>
-      <p>
+      <Text>
         안녕하세요 여러분!
         <br />
         비타민 Y는 당신의 삶에 행복을 주는 활동입니다
@@ -18,7 +19,7 @@ export default function HomePage() {
         당신의 비타민 Y를 찾아보세요!
         <br />
         (시작 전 새로고침을 한 번 해주세요!)
-      </p>
+      </Text>
       <Link to="/choice/1">Start</Link>
     </div>
   );
