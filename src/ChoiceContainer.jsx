@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 
 import { selectChoice } from './actions';
 
+import Title from './styles/Title';
+
 export default function ChoiceContainer({ question, choices, onChoiceClick }) {
   const dispatch = useDispatch();
 
@@ -14,7 +16,7 @@ export default function ChoiceContainer({ question, choices, onChoiceClick }) {
 
   return (
     <div>
-      <h2>Choice</h2>
+      <Title>Choice</Title>
       <h3>{question}</h3>
       <ul>
         {choices.map((choice) => (

@@ -2,10 +2,12 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import Title from './styles/Title';
+
 export default function HomePage() {
   return (
     <div>
-      <h2>Home</h2>
+      <Title>Home</Title>
       <p>
         안녕하세요 여러분!
         <br />
