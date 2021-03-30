@@ -15,6 +15,6 @@ const ChoiceButton = styled.button({
   '&:focus': {
     outline: 'none',
   },
-})
+});
 
 export default ChoiceButton;

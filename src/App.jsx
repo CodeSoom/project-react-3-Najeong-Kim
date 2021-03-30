@@ -1,5 +1,4 @@
 import React from 'react';
-import { GlobalStyle } from './globalStyle';
 
 import {
   Switch,
@@ -8,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import styled from '@emotion/styled';
-
+import { GlobalStyle } from './globalStyle';
 import HomePage from './HomePage';
 import ChoicePage from './ChoicePage';
 import ResultPage from './ResultPage';

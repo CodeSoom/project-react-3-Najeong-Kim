@@ -1,5 +1,5 @@
 import React from 'react';
-import { Global, css } from '@emotion/react'
+import { Global, css } from '@emotion/react';
 
 export const GlobalStyle = () => (
   <Global
@@ -9,4 +9,4 @@ export const GlobalStyle = () => (
       }
     `}
   />
-)
+);

@@ -5,6 +5,6 @@ const Text = styled.p({
   color: '#323232',
   fontSize: '18px',
   lineHeight: '35px',
-})
+});
 
 export default Text;
