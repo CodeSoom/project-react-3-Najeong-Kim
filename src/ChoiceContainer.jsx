@@ -2,9 +2,9 @@ import React from 'react';
 
 import { useDispatch } from 'react-redux';
 
-import { selectChoice } from './actions';
-
 import styled from '@emotion/styled';
+
+import { selectChoice } from './actions';
 
 import Title from './styles/Title';
 import List from './styles/List';
@@ -16,7 +16,7 @@ const Question = styled.h3({
   paddingBottom: '10px',
   color: '#F2C94C',
   fontSize: '20px',
-})
+});
 
 export default function ChoiceContainer({ question, choices, onChoiceClick }) {
   const dispatch = useDispatch();
