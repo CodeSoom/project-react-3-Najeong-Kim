@@ -55,7 +55,7 @@ export function selectResultCase(type) {
   return match[type.join('')];
 }
 
-export default function ResultContainer({ onClickActivity }) {
+export default function ResultContainer() {
   const dispatch = useDispatch();
   const selects = useSelector(get('selects'));
   const answer = useSelector(get('result'));
@@ -73,10 +73,10 @@ export default function ResultContainer({ onClickActivity }) {
   return (
     <Container>
       <List>
-        {answer?.text?.results.map(({ resultId, resultText }) => (
+        {answer?.text?.results.map(({ resultId, activityId, resultText }) => (
           <Item key={resultId}>
             <ResultItem>
-              <Link to="/activity/1" onClick={onClickActivity}>
+              <Link to={'/activity/' + activityId} >
                 {resultText}
               </Link>
             </ResultItem>
