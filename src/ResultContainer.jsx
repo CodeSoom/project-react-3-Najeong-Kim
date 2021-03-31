@@ -62,7 +62,6 @@ export default function ResultContainer() {
   const result = [];
   const resultCase = [[0, 3, 6], [2, 5, 7], [1, 4, 8]];
 
-
   resultCase.forEach((item, index) => {
     calculateResult(selects, result, index, item);
   });
@@ -77,7 +76,7 @@ export default function ResultContainer() {
         {answer?.text?.results.map(({ resultId, activityId, resultText }) => (
           <Item key={resultId}>
             <ResultItem>
-              <Link to={'/activity/' + activityId} >
+              <Link to={`/activity/${activityId}`}>
                 {resultText}
               </Link>
             </ResultItem>

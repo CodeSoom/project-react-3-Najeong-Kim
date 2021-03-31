@@ -8,9 +8,10 @@ import {
 
 import { useDispatch } from 'react-redux';
 
+import styled from '@emotion/styled';
+
 import { clearSelects } from './actions';
 
-import styled from '@emotion/styled';
 import { GlobalStyle } from './globalStyle';
 import HomePage from './HomePage';
 import ChoicePage from './ChoicePage';

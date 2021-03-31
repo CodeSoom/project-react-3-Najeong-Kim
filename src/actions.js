@@ -15,5 +15,5 @@ export function selectResult(id) {
 export function clearSelects() {
   return {
     type: 'clearSelects',
-  }
+  };
 }
