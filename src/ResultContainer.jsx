@@ -53,7 +53,7 @@ export function selectResultCase(type) {
   return match[type.join('')];
 }
 
-export default function ResultContainer() {
+export default function ResultContainer({ onClickActivity }) {
   const dispatch = useDispatch();
   const selects = useSelector(get('selects'));
   const answer = useSelector(get('result'));
@@ -74,7 +74,9 @@ export default function ResultContainer() {
         {answer?.text?.results.map(({ resultId, resultText }) => (
           <Item key={resultId}>
             <ResultItem>
-              {resultText}
+              <a href="/activity/1" onClick={onClickActivity}>
+                {resultText}
+              </a>
             </ResultItem>
           </Item>
         ))}
