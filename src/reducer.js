@@ -24,6 +24,13 @@ const reducers = {
       result: resultListData.find(equal('id', Number(id))),
     };
   },
+
+  clearSelects(state) {
+    return {
+      ...state,
+      ...initialState,
+    };
+  },
 };
 
 function defaultReducer(state) {
