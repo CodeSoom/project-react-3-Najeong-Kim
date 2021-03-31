@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Link } from 'react-router-dom';
+
 import styled from '@emotion/styled';
 
 import { get } from './utils';
@@ -74,9 +76,9 @@ export default function ResultContainer({ onClickActivity }) {
         {answer?.text?.results.map(({ resultId, resultText }) => (
           <Item key={resultId}>
             <ResultItem>
-              <a href="/activity/1" onClick={onClickActivity}>
+              <Link to="/activity/1" onClick={onClickActivity}>
                 {resultText}
-              </a>
+              </Link>
             </ResultItem>
           </Item>
         ))}
