@@ -6,6 +6,10 @@ import {
   Link,
 } from 'react-router-dom';
 
+import { useDispatch } from 'react-redux';
+
+import { clearSelects } from './actions';
+
 import styled from '@emotion/styled';
 import { GlobalStyle } from './globalStyle';
 import HomePage from './HomePage';
@@ -36,10 +40,16 @@ const Header = styled.header({
 });
 
 export default function App() {
+  const dispatch = useDispatch();
+
+  function handleClickClear() {
+    dispatch(clearSelects());
+  }
+
   return (
     <Container>
       <Header>
-        <h1><Link to="/">Vitamin Y</Link></h1>
+        <h1><Link to="/" onClick={handleClickClear}>Vitamin Y</Link></h1>
       </Header>
       <Switch>
         <Route exact path="/" component={HomePage} />

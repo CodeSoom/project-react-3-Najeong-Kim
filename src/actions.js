@@ -11,3 +11,9 @@ export function selectResult(id) {
     payload: { id },
   };
 }
+
+export function clearSelects() {
+  return {
+    type: 'clearSelects',
+  }
+}
