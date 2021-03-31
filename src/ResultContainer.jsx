@@ -62,6 +62,7 @@ export default function ResultContainer() {
   const result = [];
   const resultCase = [[0, 3, 6], [2, 5, 7], [1, 4, 8]];
 
+
   resultCase.forEach((item, index) => {
     calculateResult(selects, result, index, item);
   });
