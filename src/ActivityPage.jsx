@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
 import { get } from './utils';
 
 export default function ActivityPage() {
@@ -13,6 +14,7 @@ export default function ActivityPage() {
 
   return (
     <div>
+      <Link to="/result">Back</Link>
       <h2>{resultText}</h2>
       <p>
         {resultDetail}
