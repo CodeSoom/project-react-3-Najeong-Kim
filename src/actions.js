@@ -1,7 +1,7 @@
-export function selectChoice(choiceId) {
+export function selectChoice(id) {
   return {
     type: 'selectChoice',
-    payload: { choiceId },
+    payload: { id },
   };
 }
 

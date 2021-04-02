@@ -21,8 +21,8 @@ const Question = styled.h3({
 export default function ChoiceContainer({ question, choices, onChoiceClick }) {
   const dispatch = useDispatch();
 
-  function handleClick(choiceId) {
-    dispatch(selectChoice(choiceId));
+  function handleClick(id) {
+    dispatch(selectChoice(id));
     onChoiceClick();
   }
 
@@ -32,12 +32,12 @@ export default function ChoiceContainer({ question, choices, onChoiceClick }) {
       <Question>{question}</Question>
       <List>
         {choices.map((choice) => (
-          <Item key={choice.choiceId}>
+          <Item key={choice.id}>
             <ChoiceButton
               type="button"
-              onClick={() => handleClick(choice.choiceId)}
+              onClick={() => handleClick(choice.id)}
             >
-              {choice.choiceText}
+              {choice.text}
             </ChoiceButton>
           </Item>
         ))}

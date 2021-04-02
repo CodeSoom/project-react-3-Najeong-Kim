@@ -73,11 +73,11 @@ export default function ResultContainer() {
   return (
     <Container>
       <List>
-        {answer?.text?.results.map(({ resultId, activityId, resultText }) => (
-          <Item key={resultId}>
+        {answer?.text?.results.map(({ id, activityId, text }) => (
+          <Item key={id}>
             <ResultItem>
               <Link to={`/activity/${activityId}`}>
-                {resultText}
+                {text}
               </Link>
             </ResultItem>
           </Item>

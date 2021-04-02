@@ -1,4 +1,4 @@
-import resultListData from './resultListData';
+import resultData from './resultData';
 
 import { equal } from './utils';
 
@@ -8,12 +8,12 @@ const initialState = {
 };
 
 const reducers = {
-  selectChoice(state, { payload: { choiceId } }) {
+  selectChoice(state, { payload: { id } }) {
     return {
       ...state,
       selects: [
         ...state.selects,
-        choiceId,
+        id,
       ],
     };
   },
@@ -21,7 +21,7 @@ const reducers = {
   selectResult(state, { payload: { id } }) {
     return {
       ...state,
-      result: resultListData.find(equal('id', Number(id))),
+      result: resultData.find(equal('id', Number(id))),
     };
   },
 
