@@ -14,7 +14,7 @@ describe('ResultPage', () => {
 
   useDispatch.mockImplementation(() => dispatch);
   useSelector.mockImplementation((selector) => selector({
-    result: { id: 1, text: { results: [{ resultId: 1, resultText: '1번 결과' }] } },
+    result: { id: 1, text: { results: [{ id: 1, text: '1번 결과' }] } },
     selects: [1, 1, 1, 1, 1, 1, 1, 1, 1],
   }));
   it('renders ResultPage', () => {

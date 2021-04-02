@@ -10,23 +10,22 @@ export default function ActivityPage() {
   const selectActivity = results.find((activity) => (
     Number(activityId.id) === Number(activity.activityId)
   ));
-  const { resultText, resultDetail, resultIntro } = selectActivity;
+  const { text, detail, intro } = selectActivity;
 
   return (
     <div>
       <Link to="/result">Back</Link>
-      <h2>{resultText}</h2>
+      <h2>{text}</h2>
       <p>
-        {resultDetail}
+        {detail}
       </p>
       <ul>
-        {resultIntro.map(({
-          introId, introLink, introType, introText,
+        <p>연관 비타민</p>
+        {intro.map(({
+          id, text,
         }) => (
-          <li key={introId}>
-            {introLink}
-            {introType}
-            {introText}
+          <li key={id}>
+            {text}
           </li>
         ))}
       </ul>

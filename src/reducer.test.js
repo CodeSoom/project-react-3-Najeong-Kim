@@ -21,9 +21,9 @@ describe('reducer', () => {
         selects: [],
       };
 
-      const choiceId = 1;
+      const id = 1;
 
-      const state = reducer(initialState, selectChoice(choiceId));
+      const state = reducer(initialState, selectChoice(id));
 
       expect(state.selects).toHaveLength(1);
     });
