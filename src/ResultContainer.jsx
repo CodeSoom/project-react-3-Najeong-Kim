@@ -12,24 +12,31 @@ import { selectResult } from './actions';
 
 const Container = styled.div({
   textAlign: 'center',
-  backgroundColor: 'white',
 });
 
 const List = styled.ul({
   listStyle: 'none',
-  margin: '0',
-  padding: '10px',
-  backgroundColor: 'white',
+  padding: '0',
 });
 
 const Item = styled.li({
   backgroundColor: 'white',
+  margin: '10px',
+  padding: '5px',
+  '&:hover': {
+    boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, 0.07)',
+  },
 });
 
 const ResultItem = styled.p({
   backgroundColor: 'white',
-  color: '#737B7D',
+  margin: '10px 0',
   fontSize: '18px',
+  '& a': {
+    backgroundColor: 'white',
+    textDecoration: 'none',
+    color: '#737B7D',
+  },
 });
 
 export function calculateResult(selects, result, number, points) {
