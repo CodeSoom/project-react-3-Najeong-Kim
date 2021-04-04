@@ -2,7 +2,34 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
+import Title from './styles/Title';
+import Text from './styles/Text';
+
 import { get } from './utils';
+
+const Back = styled.div({
+  position: 'fixed',
+  right: '10px',
+  '& a': {
+    textDecoration: 'none',
+    fontSize: '18px',
+    color: '#F2C94C',
+  }
+})
+
+const List = styled.ul({
+  listStyle: 'none',
+  padding: '0',
+  textAlign: 'center',
+});
+
+const Item = styled.li({
+  backgroundColor: 'white',
+  margin: '10px',
+  padding: '10px',
+});
 
 export default function ActivityPage() {
   const activityId = useParams();
@@ -14,21 +41,21 @@ export default function ActivityPage() {
 
   return (
     <div>
-      <Link to="/result">Back</Link>
-      <h2>{text}</h2>
-      <p>
+      <Back><Link to="/result">Back</Link></Back>
+      <Title>{text}</Title>
+      <Text>
         {detail}
-      </p>
-      <ul>
+      </Text>
+      <List>
         <p>연관 비타민</p>
         {intro.map(({
           id, text,
         }) => (
-          <li key={id}>
+          <Item key={id}>
             {text}
-          </li>
+          </Item>
         ))}
-      </ul>
+      </List>
     </div>
   );
 }
