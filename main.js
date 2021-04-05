@@ -236,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ChoiceContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ \"./src/actions.js\");\n/* harmony import */ var _styles_Title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Title */ \"./src/styles/Title.jsx\");\n/* harmony import */ var _styles_List__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/List */ \"./src/styles/List.jsx\");\n/* harmony import */ var _styles_Item__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/Item */ \"./src/styles/Item.jsx\");\n/* harmony import */ var _styles_ChoiceButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/ChoiceButton */ \"./src/styles/ChoiceButton.jsx\");\n\n\n\n\n\n\n\n\nconst Question = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.h3({\n  paddingLeft: '20px',\n  paddingBottom: '10px',\n  color: '#F2C94C',\n  fontSize: '20px'\n});\nfunction ChoiceContainer({\n  question,\n  choices,\n  onChoiceClick\n}) {\n  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n\n  function handleClick(id) {\n    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_3__.selectChoice)(id));\n    onChoiceClick();\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Title__WEBPACK_IMPORTED_MODULE_4__.default, null, \"Choice\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Question, null, question), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_List__WEBPACK_IMPORTED_MODULE_5__.default, null, choices.map(choice => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Item__WEBPACK_IMPORTED_MODULE_6__.default, {\n    key: choice.id\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_ChoiceButton__WEBPACK_IMPORTED_MODULE_7__.default, {\n    type: \"button\",\n    onClick: () => handleClick(choice.id)\n  }, choice.text)))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ChoiceContainer.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ChoiceContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ \"./src/actions.js\");\n/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/images */ \"./src/assets/images.js\");\n/* harmony import */ var _styles_Title__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/Title */ \"./src/styles/Title.jsx\");\n/* harmony import */ var _styles_List__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/List */ \"./src/styles/List.jsx\");\n/* harmony import */ var _styles_Item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/Item */ \"./src/styles/Item.jsx\");\n/* harmony import */ var _styles_ChoiceButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/ChoiceButton */ \"./src/styles/ChoiceButton.jsx\");\n\n\n\n\n\n\n\n\n\nconst Question = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.h3({\n  paddingLeft: '20px',\n  paddingBottom: '10px',\n  color: '#F2C94C',\n  fontSize: '20px'\n});\nfunction ChoiceContainer({\n  choiceId,\n  question,\n  choices,\n  onChoiceClick\n}) {\n  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n\n  function handleClick(id) {\n    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_3__.selectChoice)(id));\n    onChoiceClick();\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Title__WEBPACK_IMPORTED_MODULE_5__.default, null, \"Choice\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Question, null, question), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_List__WEBPACK_IMPORTED_MODULE_6__.default, null, choices.map(choice => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Item__WEBPACK_IMPORTED_MODULE_7__.default, {\n    key: choice.id\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_ChoiceButton__WEBPACK_IMPORTED_MODULE_8__.default, {\n    type: \"button\",\n    onClick: () => handleClick(choice.id)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: _assets_images__WEBPACK_IMPORTED_MODULE_4__.choicesImages[(choiceId - 1) * 2 + choice.id]\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, choice.text))))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ChoiceContainer.jsx?");
 
 /***/ }),
 
@@ -247,7 +247,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ChoicePage)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _choiceData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./choiceData */ \"./src/choiceData.js\");\n/* harmony import */ var _ChoiceContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChoiceContainer */ \"./src/ChoiceContainer.jsx\");\n/* harmony import */ var _ProgressContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProgressContainer */ \"./src/ProgressContainer.jsx\");\n\n\n\n\n\nfunction ChoicePage() {\n  const {\n    id\n  } = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useParams)();\n  const history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useHistory)();\n  const {\n    question,\n    choices\n  } = _choiceData__WEBPACK_IMPORTED_MODULE_1__.default[Number(id) - 1].text;\n\n  function handleClick() {\n    if (Number(id) < 9) {\n      return history.push(`/choice/${Number(id) + 1}`);\n    }\n\n    return history.push('/result');\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ChoiceContainer__WEBPACK_IMPORTED_MODULE_2__.default, {\n    question: question,\n    choices: choices,\n    onChoiceClick: handleClick\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProgressContainer__WEBPACK_IMPORTED_MODULE_3__.default, {\n    id: id\n  }));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ChoicePage.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ChoicePage)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var _choiceData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./choiceData */ \"./src/choiceData.js\");\n/* harmony import */ var _ChoiceContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChoiceContainer */ \"./src/ChoiceContainer.jsx\");\n/* harmony import */ var _ProgressContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProgressContainer */ \"./src/ProgressContainer.jsx\");\n\n\n\n\n\nfunction ChoicePage() {\n  const {\n    id\n  } = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useParams)();\n  const history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useHistory)();\n  const {\n    question,\n    choices\n  } = _choiceData__WEBPACK_IMPORTED_MODULE_1__.default[Number(id) - 1].text;\n\n  function handleClick() {\n    if (Number(id) < 9) {\n      return history.push(`/choice/${Number(id) + 1}`);\n    }\n\n    return history.push('/result');\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ChoiceContainer__WEBPACK_IMPORTED_MODULE_2__.default, {\n    choiceId: id,\n    question: question,\n    choices: choices,\n    onChoiceClick: handleClick\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProgressContainer__WEBPACK_IMPORTED_MODULE_3__.default, {\n    id: id\n  }));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ChoicePage.jsx?");
 
 /***/ }),
 
@@ -303,6 +303,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"selectChoice\": () => (/* binding */ selectChoice),\n/* harmony export */   \"selectResult\": () => (/* binding */ selectResult),\n/* harmony export */   \"clearSelects\": () => (/* binding */ clearSelects)\n/* harmony export */ });\nfunction selectChoice(id) {\n  return {\n    type: 'selectChoice',\n    payload: {\n      id\n    }\n  };\n}\nfunction selectResult(id) {\n  return {\n    type: 'selectResult',\n    payload: {\n      id\n    }\n  };\n}\nfunction clearSelects() {\n  return {\n    type: 'clearSelects'\n  };\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/actions.js?");
+
+/***/ }),
+
+/***/ "./src/assets/images.js":
+/*!******************************!*\
+  !*** ./src/assets/images.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"choicesImages\": () => (/* binding */ choicesImages)\n/* harmony export */ });\n/* harmony import */ var _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/choices/1-1.jpg */ \"./src/assets/images/choices/1-1.jpg\");\n/* harmony import */ var _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/choices/1-2.jpg */ \"./src/assets/images/choices/1-2.jpg\");\n/* harmony import */ var _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/choices/2-1.jpg */ \"./src/assets/images/choices/2-1.jpg\");\n/* harmony import */ var _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/choices/2-2.jpg */ \"./src/assets/images/choices/2-2.jpg\");\n/* harmony import */ var _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/choices/3-1.jpg */ \"./src/assets/images/choices/3-1.jpg\");\n/* harmony import */ var _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/choices/3-2.jpg */ \"./src/assets/images/choices/3-2.jpg\");\n/* harmony import */ var _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images/choices/4-1.jpg */ \"./src/assets/images/choices/4-1.jpg\");\n/* harmony import */ var _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./images/choices/4-2.jpg */ \"./src/assets/images/choices/4-2.jpg\");\n/* harmony import */ var _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images/choices/5-1.jpg */ \"./src/assets/images/choices/5-1.jpg\");\n/* harmony import */ var _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/choices/5-2.jpg */ \"./src/assets/images/choices/5-2.jpg\");\n/* harmony import */ var _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/choices/6-1.jpg */ \"./src/assets/images/choices/6-1.jpg\");\n/* harmony import */ var _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images/choices/6-2.jpg */ \"./src/assets/images/choices/6-2.jpg\");\n/* harmony import */ var _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./images/choices/7-1.jpg */ \"./src/assets/images/choices/7-1.jpg\");\n/* harmony import */ var _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./images/choices/7-2.jpg */ \"./src/assets/images/choices/7-2.jpg\");\n/* harmony import */ var _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./images/choices/8-1.jpg */ \"./src/assets/images/choices/8-1.jpg\");\n/* harmony import */ var _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./images/choices/8-2.jpg */ \"./src/assets/images/choices/8-2.jpg\");\n/* harmony import */ var _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./images/choices/9-1.jpg */ \"./src/assets/images/choices/9-1.jpg\");\n/* harmony import */ var _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./images/choices/9-2.jpg */ \"./src/assets/images/choices/9-2.jpg\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nconst choicesImages = {\n  1: _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__.default,\n  2: _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__.default,\n  3: _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default,\n  4: _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__.default,\n  5: _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__.default,\n  6: _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__.default,\n  7: _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__.default,\n  8: _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__.default,\n  9: _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__.default,\n  10: _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__.default,\n  11: _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__.default,\n  12: _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__.default,\n  13: _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__.default,\n  14: _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__.default,\n  15: _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__.default,\n  16: _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__.default,\n  17: _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__.default,\n  18: _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__.default\n};\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images.js?");
 
 /***/ }),
 
@@ -379,7 +390,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n\nconst ChoiceButton = _emotion_styled__WEBPACK_IMPORTED_MODULE_0__.default.button({\n  padding: '20px',\n  backgroundColor: 'white',\n  color: '#828282',\n  border: 'none',\n  fontSize: '18px',\n  textAlign: 'left',\n  height: '100px',\n  borderRadius: '10px',\n  '&:hover': {\n    boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, 0.07)'\n  },\n  '&:focus': {\n    outline: 'none'\n  }\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChoiceButton);\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/styles/ChoiceButton.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n\nconst ChoiceButton = _emotion_styled__WEBPACK_IMPORTED_MODULE_0__.default.button({\n  display: 'flex',\n  justifyContent: 'center',\n  alignItems: 'center',\n  padding: '20px',\n  backgroundColor: 'white',\n  color: '#828282',\n  border: 'none',\n  fontSize: '18px',\n  textAlign: 'left',\n  height: '150px',\n  borderRadius: '10px',\n  '&:hover': {\n    boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, 0.07)'\n  },\n  '&:focus': {\n    outline: 'none'\n  },\n  '& img': {\n    width: '120px',\n    height: '120px',\n    marginRight: '20px',\n    borderRadius: '10px'\n  },\n  '& p': {\n    backgroundColor: 'white'\n  }\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChoiceButton);\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/styles/ChoiceButton.jsx?");
 
 /***/ }),
 
@@ -435,6 +446,204 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"get\": () => (/* binding */ get),\n/* harmony export */   \"equal\": () => (/* binding */ equal)\n/* harmony export */ });\nfunction get(key) {\n  return obj => obj[key];\n}\nfunction equal(key, value) {\n  return obj => obj[key] === value;\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/utils.js?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/1-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/1-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"9c397d0b45cc803118e2d9320348062d.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/1-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/1-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/1-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"9de5a1ac6cde166114c203032f6e75b0.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/1-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/2-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/2-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"fdc7ab17e469a77a52e1f079d2e2baee.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/2-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/2-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/2-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"3c90ab1bb83f1808f72450233e9d502e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/2-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/3-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/3-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"db5b56f9c54f8d108703d08fa58658ec.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/3-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/3-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/3-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"a06ded49ba8d8b3780b94ba9dc784304.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/3-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/4-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/4-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c98758ecadb8914973f8c38c550ba52c.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/4-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/4-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/4-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"9806e2e53dfe24971cacc233de4858f7.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/4-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/5-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/5-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"59b06f55d1075539bfc1e90a5c3e14f5.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/5-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/5-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/5-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"38fca410e7d0baad684d7ce73648396f.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/5-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/6-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/6-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"1e41ac8b94620a9d63107557f593024c.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/6-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/6-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/6-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"33bf869b67821030309d203f2d74044e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/6-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/7-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/7-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"807d4bfa0a2b288686f6bce534375aeb.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/7-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/7-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/7-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c444a907ed977fcf33e95852d4d059a7.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/7-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/8-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/8-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"7787514140719ccce72cec1dafc26882.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/8-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/8-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/8-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"485340ca414806707c2ee5c6967aed23.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/8-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/9-1.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/9-1.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e77b842394dd21f5c74f7f50de8a0493.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/9-1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/choices/9-2.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/choices/9-2.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"76363d2cffe55fddf4dfe30cf229386f.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/9-2.jpg?");
 
 /***/ }),
 
@@ -1179,6 +1388,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
