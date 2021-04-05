@@ -6,6 +6,8 @@ import choiceData from './choiceData';
 
 import ChoiceContainer from './ChoiceContainer';
 
+import ProgressContainer from './ProgressContainer';
+
 export default function ChoicePage() {
   const { id } = useParams();
   const history = useHistory();
@@ -24,6 +26,9 @@ export default function ChoicePage() {
         question={question}
         choices={choices}
         onChoiceClick={handleClick}
+      />
+      <ProgressContainer
+        id={id}
       />
     </div>
   );
