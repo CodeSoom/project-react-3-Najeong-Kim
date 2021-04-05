@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
+import { vitaminsImages } from './assets/images';
+
 import styled from '@emotion/styled';
 
 import { get } from './utils';
@@ -33,9 +35,20 @@ const ResultItem = styled.p({
   margin: '10px 0',
   fontSize: '18px',
   '& a': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     backgroundColor: 'white',
     textDecoration: 'none',
     color: '#737B7D',
+  },
+  '& img': {
+    width: '150px',
+    height: '150px',
+    marginBottom: '20px',
+  },
+  '& span': {
+    backgroundColor: 'white',
   },
 });
 
@@ -84,7 +97,8 @@ export default function ResultContainer() {
           <Item key={id}>
             <ResultItem>
               <Link to={`/activity/${activityId}`}>
-                {text}
+                <img src={vitaminsImages[activityId]} />
+                <span>{text}</span>
               </Link>
             </ResultItem>
           </Item>
