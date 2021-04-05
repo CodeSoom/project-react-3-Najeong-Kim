@@ -214,7 +214,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ActivityPage)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _styles_Title__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/Title */ \"./src/styles/Title.jsx\");\n/* harmony import */ var _styles_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Text */ \"./src/styles/Text.jsx\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n\n\n\n\n\n\n\nconst Back = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.div({\n  position: 'fixed',\n  right: '10px',\n  '& a': {\n    textDecoration: 'none',\n    fontSize: '18px',\n    color: '#F2C94C'\n  }\n});\nconst List = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.ul({\n  listStyle: 'none',\n  padding: '0',\n  textAlign: 'center'\n});\nconst Item = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.li({\n  backgroundColor: 'white',\n  margin: '10px',\n  padding: '10px'\n});\nfunction ActivityPage() {\n  const activityId = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)();\n  const {\n    text: {\n      results\n    }\n  } = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_5__.get)('result'));\n  const selectActivity = results.find(activity => Number(activityId.id) === Number(activity.activityId));\n  const {\n    text,\n    detail,\n    intro\n  } = selectActivity;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Back, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {\n    to: \"/result\"\n  }, \"Back\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Title__WEBPACK_IMPORTED_MODULE_3__.default, null, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Text__WEBPACK_IMPORTED_MODULE_4__.default, null, detail), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(List, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, \"\\uC5F0\\uAD00 \\uBE44\\uD0C0\\uBBFC\"), intro.map(({\n    id,\n    text\n  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Item, {\n    key: id\n  }, text))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ActivityPage.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ActivityPage)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router/esm/react-router.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/images */ \"./src/assets/images.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _styles_Title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Title */ \"./src/styles/Title.jsx\");\n/* harmony import */ var _styles_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/Text */ \"./src/styles/Text.jsx\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n\n\n\n\n\n\n\n\nconst Back = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.div({\n  position: 'fixed',\n  right: '10px',\n  '& a': {\n    textDecoration: 'none',\n    fontSize: '18px',\n    color: '#F2C94C'\n  }\n});\nconst Wrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.div({\n  display: 'flex',\n  flexDirection: 'column',\n  alignItems: 'center',\n  '& img': {\n    width: '200px',\n    height: '200px'\n  }\n});\nconst List = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.ul({\n  listStyle: 'none',\n  padding: '0',\n  textAlign: 'center'\n});\nconst Item = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.li({\n  backgroundColor: 'white',\n  margin: '10px',\n  padding: '10px'\n});\nfunction ActivityPage() {\n  const activityId = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_7__.useParams)();\n  const {\n    text: {\n      results\n    }\n  } = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_6__.get)('result'));\n  const selectActivity = results.find(activity => Number(activityId.id) === Number(activity.activityId));\n  const {\n    text,\n    detail,\n    intro\n  } = selectActivity;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Back, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {\n    to: \"/result\"\n  }, \"Back\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Title__WEBPACK_IMPORTED_MODULE_4__.default, null, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: _assets_images__WEBPACK_IMPORTED_MODULE_2__.vitaminsImages[activityId.id]\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_styles_Text__WEBPACK_IMPORTED_MODULE_5__.default, null, detail)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(List, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, \"\\uC5F0\\uAD00 \\uBE44\\uD0C0\\uBBFC\"), intro.map(({\n    id,\n    text\n  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Item, {\n    key: id\n  }, text))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ActivityPage.jsx?");
 
 /***/ }),
 
@@ -280,7 +280,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"calculateResult\": () => (/* binding */ calculateResult),\n/* harmony export */   \"selectResultCase\": () => (/* binding */ selectResultCase),\n/* harmony export */   \"default\": () => (/* binding */ ResultContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions */ \"./src/actions.js\");\n\n\n\n\n\n\nconst Container = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.div({\n  textAlign: 'center'\n});\nconst List = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.ul({\n  listStyle: 'none',\n  padding: '0'\n});\nconst Item = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.li({\n  backgroundColor: 'white',\n  margin: '10px',\n  padding: '5px',\n  '&:hover': {\n    boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, 0.07)'\n  }\n});\nconst ResultItem = _emotion_styled__WEBPACK_IMPORTED_MODULE_2__.default.p({\n  backgroundColor: 'white',\n  margin: '10px 0',\n  fontSize: '18px',\n  '& a': {\n    backgroundColor: 'white',\n    textDecoration: 'none',\n    color: '#737B7D'\n  }\n});\nfunction calculateResult(selects, result, number, points) {\n  if (selects[points[0]] + selects[points[1]] + selects[points[2]] < 5) {\n    return result[number] = 'A';\n  }\n\n  return result[number] = 'B';\n}\nfunction selectResultCase(type) {\n  const match = {\n    AAA: 1,\n    AAB: 2,\n    ABA: 3,\n    ABB: 4,\n    BAA: 5,\n    BAB: 6,\n    BBA: 7,\n    BBB: 8\n  };\n  return match[type.join('')];\n}\nfunction ResultContainer() {\n  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n  const selects = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_3__.get)('selects'));\n  const answer = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_3__.get)('result'));\n  const result = [];\n  const resultCase = [[0, 3, 6], [2, 5, 7], [1, 4, 8]];\n  resultCase.forEach((item, index) => {\n    calculateResult(selects, result, index, item);\n  });\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\n    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.selectResult)(selectResultCase(result)));\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(List, null, answer?.text?.results.map(({\n    id,\n    activityId,\n    text\n  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Item, {\n    key: id\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ResultItem, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {\n    to: `/activity/${activityId}`\n  }, text))))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ResultContainer.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"calculateResult\": () => (/* binding */ calculateResult),\n/* harmony export */   \"selectResultCase\": () => (/* binding */ selectResultCase),\n/* harmony export */   \"default\": () => (/* binding */ ResultContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/images */ \"./src/assets/images.js\");\n/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/styled */ \"./node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions */ \"./src/actions.js\");\n\n\n\n\n\n\n\nconst Container = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.div({\n  textAlign: 'center'\n});\nconst List = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.ul({\n  listStyle: 'none',\n  padding: '0'\n});\nconst Item = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.li({\n  backgroundColor: 'white',\n  margin: '10px',\n  padding: '5px',\n  '&:hover': {\n    boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, 0.07)'\n  }\n});\nconst ResultItem = _emotion_styled__WEBPACK_IMPORTED_MODULE_3__.default.p({\n  backgroundColor: 'white',\n  margin: '10px 0',\n  fontSize: '18px',\n  '& a': {\n    display: 'flex',\n    flexDirection: 'column',\n    alignItems: 'center',\n    backgroundColor: 'white',\n    textDecoration: 'none',\n    color: '#737B7D'\n  },\n  '& img': {\n    width: '150px',\n    height: '150px',\n    marginBottom: '20px'\n  },\n  '& span': {\n    backgroundColor: 'white'\n  }\n});\nfunction calculateResult(selects, result, number, points) {\n  if (selects[points[0]] + selects[points[1]] + selects[points[2]] < 5) {\n    return result[number] = 'A';\n  }\n\n  return result[number] = 'B';\n}\nfunction selectResultCase(type) {\n  const match = {\n    AAA: 1,\n    AAB: 2,\n    ABA: 3,\n    ABB: 4,\n    BAA: 5,\n    BAB: 6,\n    BBA: 7,\n    BBB: 8\n  };\n  return match[type.join('')];\n}\nfunction ResultContainer() {\n  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\n  const selects = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_4__.get)('selects'));\n  const answer = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((0,_utils__WEBPACK_IMPORTED_MODULE_4__.get)('result'));\n  const result = [];\n  const resultCase = [[0, 3, 6], [2, 5, 7], [1, 4, 8]];\n  resultCase.forEach((item, index) => {\n    calculateResult(selects, result, index, item);\n  });\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\n    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__.selectResult)(selectResultCase(result)));\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(List, null, answer?.text?.results.map(({\n    id,\n    activityId,\n    text\n  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Item, {\n    key: id\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ResultItem, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {\n    to: `/activity/${activityId}`\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    src: _assets_images__WEBPACK_IMPORTED_MODULE_2__.vitaminsImages[activityId]\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, text)))))));\n}\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/ResultContainer.jsx?");
 
 /***/ }),
 
@@ -313,7 +313,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"choicesImages\": () => (/* binding */ choicesImages)\n/* harmony export */ });\n/* harmony import */ var _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/choices/1-1.jpg */ \"./src/assets/images/choices/1-1.jpg\");\n/* harmony import */ var _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/choices/1-2.jpg */ \"./src/assets/images/choices/1-2.jpg\");\n/* harmony import */ var _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/choices/2-1.jpg */ \"./src/assets/images/choices/2-1.jpg\");\n/* harmony import */ var _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/choices/2-2.jpg */ \"./src/assets/images/choices/2-2.jpg\");\n/* harmony import */ var _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/choices/3-1.jpg */ \"./src/assets/images/choices/3-1.jpg\");\n/* harmony import */ var _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/choices/3-2.jpg */ \"./src/assets/images/choices/3-2.jpg\");\n/* harmony import */ var _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images/choices/4-1.jpg */ \"./src/assets/images/choices/4-1.jpg\");\n/* harmony import */ var _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./images/choices/4-2.jpg */ \"./src/assets/images/choices/4-2.jpg\");\n/* harmony import */ var _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images/choices/5-1.jpg */ \"./src/assets/images/choices/5-1.jpg\");\n/* harmony import */ var _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/choices/5-2.jpg */ \"./src/assets/images/choices/5-2.jpg\");\n/* harmony import */ var _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/choices/6-1.jpg */ \"./src/assets/images/choices/6-1.jpg\");\n/* harmony import */ var _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images/choices/6-2.jpg */ \"./src/assets/images/choices/6-2.jpg\");\n/* harmony import */ var _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./images/choices/7-1.jpg */ \"./src/assets/images/choices/7-1.jpg\");\n/* harmony import */ var _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./images/choices/7-2.jpg */ \"./src/assets/images/choices/7-2.jpg\");\n/* harmony import */ var _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./images/choices/8-1.jpg */ \"./src/assets/images/choices/8-1.jpg\");\n/* harmony import */ var _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./images/choices/8-2.jpg */ \"./src/assets/images/choices/8-2.jpg\");\n/* harmony import */ var _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./images/choices/9-1.jpg */ \"./src/assets/images/choices/9-1.jpg\");\n/* harmony import */ var _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./images/choices/9-2.jpg */ \"./src/assets/images/choices/9-2.jpg\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nconst choicesImages = {\n  1: _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__.default,\n  2: _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__.default,\n  3: _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default,\n  4: _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__.default,\n  5: _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__.default,\n  6: _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__.default,\n  7: _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__.default,\n  8: _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__.default,\n  9: _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__.default,\n  10: _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__.default,\n  11: _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__.default,\n  12: _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__.default,\n  13: _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__.default,\n  14: _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__.default,\n  15: _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__.default,\n  16: _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__.default,\n  17: _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__.default,\n  18: _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__.default\n};\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"choicesImages\": () => (/* binding */ choicesImages),\n/* harmony export */   \"vitaminsImages\": () => (/* binding */ vitaminsImages)\n/* harmony export */ });\n/* harmony import */ var _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/choices/1-1.jpg */ \"./src/assets/images/choices/1-1.jpg\");\n/* harmony import */ var _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/choices/1-2.jpg */ \"./src/assets/images/choices/1-2.jpg\");\n/* harmony import */ var _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/choices/2-1.jpg */ \"./src/assets/images/choices/2-1.jpg\");\n/* harmony import */ var _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/choices/2-2.jpg */ \"./src/assets/images/choices/2-2.jpg\");\n/* harmony import */ var _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/choices/3-1.jpg */ \"./src/assets/images/choices/3-1.jpg\");\n/* harmony import */ var _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/choices/3-2.jpg */ \"./src/assets/images/choices/3-2.jpg\");\n/* harmony import */ var _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images/choices/4-1.jpg */ \"./src/assets/images/choices/4-1.jpg\");\n/* harmony import */ var _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./images/choices/4-2.jpg */ \"./src/assets/images/choices/4-2.jpg\");\n/* harmony import */ var _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images/choices/5-1.jpg */ \"./src/assets/images/choices/5-1.jpg\");\n/* harmony import */ var _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/choices/5-2.jpg */ \"./src/assets/images/choices/5-2.jpg\");\n/* harmony import */ var _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/choices/6-1.jpg */ \"./src/assets/images/choices/6-1.jpg\");\n/* harmony import */ var _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images/choices/6-2.jpg */ \"./src/assets/images/choices/6-2.jpg\");\n/* harmony import */ var _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./images/choices/7-1.jpg */ \"./src/assets/images/choices/7-1.jpg\");\n/* harmony import */ var _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./images/choices/7-2.jpg */ \"./src/assets/images/choices/7-2.jpg\");\n/* harmony import */ var _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./images/choices/8-1.jpg */ \"./src/assets/images/choices/8-1.jpg\");\n/* harmony import */ var _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./images/choices/8-2.jpg */ \"./src/assets/images/choices/8-2.jpg\");\n/* harmony import */ var _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./images/choices/9-1.jpg */ \"./src/assets/images/choices/9-1.jpg\");\n/* harmony import */ var _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./images/choices/9-2.jpg */ \"./src/assets/images/choices/9-2.jpg\");\n/* harmony import */ var _images_vitamins_1_jpg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./images/vitamins/1.jpg */ \"./src/assets/images/vitamins/1.jpg\");\n/* harmony import */ var _images_vitamins_2_jpg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./images/vitamins/2.jpg */ \"./src/assets/images/vitamins/2.jpg\");\n/* harmony import */ var _images_vitamins_3_jpg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./images/vitamins/3.jpg */ \"./src/assets/images/vitamins/3.jpg\");\n/* harmony import */ var _images_vitamins_4_jpg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./images/vitamins/4.jpg */ \"./src/assets/images/vitamins/4.jpg\");\n/* harmony import */ var _images_vitamins_5_jpg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./images/vitamins/5.jpg */ \"./src/assets/images/vitamins/5.jpg\");\n/* harmony import */ var _images_vitamins_6_jpg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./images/vitamins/6.jpg */ \"./src/assets/images/vitamins/6.jpg\");\n/* harmony import */ var _images_vitamins_7_jpg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./images/vitamins/7.jpg */ \"./src/assets/images/vitamins/7.jpg\");\n/* harmony import */ var _images_vitamins_8_jpg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./images/vitamins/8.jpg */ \"./src/assets/images/vitamins/8.jpg\");\n/* harmony import */ var _images_vitamins_9_jpg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./images/vitamins/9.jpg */ \"./src/assets/images/vitamins/9.jpg\");\n/* harmony import */ var _images_vitamins_10_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./images/vitamins/10.jpg */ \"./src/assets/images/vitamins/10.jpg\");\n/* harmony import */ var _images_vitamins_11_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./images/vitamins/11.jpg */ \"./src/assets/images/vitamins/11.jpg\");\n/* harmony import */ var _images_vitamins_12_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./images/vitamins/12.jpg */ \"./src/assets/images/vitamins/12.jpg\");\n/* harmony import */ var _images_vitamins_13_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./images/vitamins/13.jpg */ \"./src/assets/images/vitamins/13.jpg\");\n/* harmony import */ var _images_vitamins_14_jpg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./images/vitamins/14.jpg */ \"./src/assets/images/vitamins/14.jpg\");\n/* harmony import */ var _images_vitamins_15_jpg__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./images/vitamins/15.jpg */ \"./src/assets/images/vitamins/15.jpg\");\n/* harmony import */ var _images_vitamins_16_jpg__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./images/vitamins/16.jpg */ \"./src/assets/images/vitamins/16.jpg\");\n/* harmony import */ var _images_vitamins_17_jpg__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./images/vitamins/17.jpg */ \"./src/assets/images/vitamins/17.jpg\");\n/* harmony import */ var _images_vitamins_18_jpg__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./images/vitamins/18.jpg */ \"./src/assets/images/vitamins/18.jpg\");\n/* harmony import */ var _images_vitamins_19_jpg__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./images/vitamins/19.jpg */ \"./src/assets/images/vitamins/19.jpg\");\n/* harmony import */ var _images_vitamins_20_jpg__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./images/vitamins/20.jpg */ \"./src/assets/images/vitamins/20.jpg\");\n/* harmony import */ var _images_vitamins_21_jpg__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./images/vitamins/21.jpg */ \"./src/assets/images/vitamins/21.jpg\");\n/* harmony import */ var _images_vitamins_22_jpg__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./images/vitamins/22.jpg */ \"./src/assets/images/vitamins/22.jpg\");\n/* harmony import */ var _images_vitamins_23_jpg__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./images/vitamins/23.jpg */ \"./src/assets/images/vitamins/23.jpg\");\n/* harmony import */ var _images_vitamins_24_jpg__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./images/vitamins/24.jpg */ \"./src/assets/images/vitamins/24.jpg\");\n/* harmony import */ var _images_vitamins_25_jpg__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./images/vitamins/25.jpg */ \"./src/assets/images/vitamins/25.jpg\");\n/* harmony import */ var _images_vitamins_26_jpg__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./images/vitamins/26.jpg */ \"./src/assets/images/vitamins/26.jpg\");\n/* harmony import */ var _images_vitamins_27_jpg__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./images/vitamins/27.jpg */ \"./src/assets/images/vitamins/27.jpg\");\n/* harmony import */ var _images_vitamins_28_jpg__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./images/vitamins/28.jpg */ \"./src/assets/images/vitamins/28.jpg\");\n/* harmony import */ var _images_vitamins_29_jpg__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./images/vitamins/29.jpg */ \"./src/assets/images/vitamins/29.jpg\");\n/* harmony import */ var _images_vitamins_30_jpg__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./images/vitamins/30.jpg */ \"./src/assets/images/vitamins/30.jpg\");\n/* harmony import */ var _images_vitamins_31_jpg__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./images/vitamins/31.jpg */ \"./src/assets/images/vitamins/31.jpg\");\n/* harmony import */ var _images_vitamins_32_jpg__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./images/vitamins/32.jpg */ \"./src/assets/images/vitamins/32.jpg\");\n/* harmony import */ var _images_vitamins_33_jpg__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./images/vitamins/33.jpg */ \"./src/assets/images/vitamins/33.jpg\");\n/* harmony import */ var _images_vitamins_34_jpg__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./images/vitamins/34.jpg */ \"./src/assets/images/vitamins/34.jpg\");\n/* harmony import */ var _images_vitamins_35_jpg__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./images/vitamins/35.jpg */ \"./src/assets/images/vitamins/35.jpg\");\n/* harmony import */ var _images_vitamins_36_jpg__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./images/vitamins/36.jpg */ \"./src/assets/images/vitamins/36.jpg\");\n/* harmony import */ var _images_vitamins_37_jpg__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./images/vitamins/37.jpg */ \"./src/assets/images/vitamins/37.jpg\");\n/* harmony import */ var _images_vitamins_38_jpg__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./images/vitamins/38.jpg */ \"./src/assets/images/vitamins/38.jpg\");\n/* harmony import */ var _images_vitamins_39_jpg__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./images/vitamins/39.jpg */ \"./src/assets/images/vitamins/39.jpg\");\n/* harmony import */ var _images_vitamins_40_jpg__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./images/vitamins/40.jpg */ \"./src/assets/images/vitamins/40.jpg\");\n/* harmony import */ var _images_vitamins_41_jpg__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./images/vitamins/41.jpg */ \"./src/assets/images/vitamins/41.jpg\");\n/* harmony import */ var _images_vitamins_42_jpg__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./images/vitamins/42.jpg */ \"./src/assets/images/vitamins/42.jpg\");\n/* harmony import */ var _images_vitamins_43_jpg__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./images/vitamins/43.jpg */ \"./src/assets/images/vitamins/43.jpg\");\n/* harmony import */ var _images_vitamins_44_jpg__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./images/vitamins/44.jpg */ \"./src/assets/images/vitamins/44.jpg\");\n/* harmony import */ var _images_vitamins_45_jpg__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./images/vitamins/45.jpg */ \"./src/assets/images/vitamins/45.jpg\");\n/* harmony import */ var _images_vitamins_46_jpg__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./images/vitamins/46.jpg */ \"./src/assets/images/vitamins/46.jpg\");\n/* harmony import */ var _images_vitamins_47_jpg__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./images/vitamins/47.jpg */ \"./src/assets/images/vitamins/47.jpg\");\n/* harmony import */ var _images_vitamins_48_jpg__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./images/vitamins/48.jpg */ \"./src/assets/images/vitamins/48.jpg\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nconst choicesImages = {\n  1: _images_choices_1_1_jpg__WEBPACK_IMPORTED_MODULE_0__.default,\n  2: _images_choices_1_2_jpg__WEBPACK_IMPORTED_MODULE_1__.default,\n  3: _images_choices_2_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default,\n  4: _images_choices_2_2_jpg__WEBPACK_IMPORTED_MODULE_3__.default,\n  5: _images_choices_3_1_jpg__WEBPACK_IMPORTED_MODULE_4__.default,\n  6: _images_choices_3_2_jpg__WEBPACK_IMPORTED_MODULE_5__.default,\n  7: _images_choices_4_1_jpg__WEBPACK_IMPORTED_MODULE_6__.default,\n  8: _images_choices_4_2_jpg__WEBPACK_IMPORTED_MODULE_7__.default,\n  9: _images_choices_5_1_jpg__WEBPACK_IMPORTED_MODULE_8__.default,\n  10: _images_choices_5_2_jpg__WEBPACK_IMPORTED_MODULE_9__.default,\n  11: _images_choices_6_1_jpg__WEBPACK_IMPORTED_MODULE_10__.default,\n  12: _images_choices_6_2_jpg__WEBPACK_IMPORTED_MODULE_11__.default,\n  13: _images_choices_7_1_jpg__WEBPACK_IMPORTED_MODULE_12__.default,\n  14: _images_choices_7_2_jpg__WEBPACK_IMPORTED_MODULE_13__.default,\n  15: _images_choices_8_1_jpg__WEBPACK_IMPORTED_MODULE_14__.default,\n  16: _images_choices_8_2_jpg__WEBPACK_IMPORTED_MODULE_15__.default,\n  17: _images_choices_9_1_jpg__WEBPACK_IMPORTED_MODULE_16__.default,\n  18: _images_choices_9_2_jpg__WEBPACK_IMPORTED_MODULE_17__.default\n};\nconst vitaminsImages = {\n  1: _images_vitamins_1_jpg__WEBPACK_IMPORTED_MODULE_18__.default,\n  2: _images_vitamins_2_jpg__WEBPACK_IMPORTED_MODULE_19__.default,\n  3: _images_vitamins_3_jpg__WEBPACK_IMPORTED_MODULE_20__.default,\n  4: _images_vitamins_4_jpg__WEBPACK_IMPORTED_MODULE_21__.default,\n  5: _images_vitamins_5_jpg__WEBPACK_IMPORTED_MODULE_22__.default,\n  6: _images_vitamins_6_jpg__WEBPACK_IMPORTED_MODULE_23__.default,\n  7: _images_vitamins_7_jpg__WEBPACK_IMPORTED_MODULE_24__.default,\n  8: _images_vitamins_8_jpg__WEBPACK_IMPORTED_MODULE_25__.default,\n  9: _images_vitamins_9_jpg__WEBPACK_IMPORTED_MODULE_26__.default,\n  10: _images_vitamins_10_jpg__WEBPACK_IMPORTED_MODULE_27__.default,\n  11: _images_vitamins_11_jpg__WEBPACK_IMPORTED_MODULE_28__.default,\n  12: _images_vitamins_12_jpg__WEBPACK_IMPORTED_MODULE_29__.default,\n  13: _images_vitamins_13_jpg__WEBPACK_IMPORTED_MODULE_30__.default,\n  14: _images_vitamins_14_jpg__WEBPACK_IMPORTED_MODULE_31__.default,\n  15: _images_vitamins_15_jpg__WEBPACK_IMPORTED_MODULE_32__.default,\n  16: _images_vitamins_16_jpg__WEBPACK_IMPORTED_MODULE_33__.default,\n  17: _images_vitamins_17_jpg__WEBPACK_IMPORTED_MODULE_34__.default,\n  18: _images_vitamins_18_jpg__WEBPACK_IMPORTED_MODULE_35__.default,\n  19: _images_vitamins_19_jpg__WEBPACK_IMPORTED_MODULE_36__.default,\n  20: _images_vitamins_20_jpg__WEBPACK_IMPORTED_MODULE_37__.default,\n  21: _images_vitamins_21_jpg__WEBPACK_IMPORTED_MODULE_38__.default,\n  22: _images_vitamins_22_jpg__WEBPACK_IMPORTED_MODULE_39__.default,\n  23: _images_vitamins_23_jpg__WEBPACK_IMPORTED_MODULE_40__.default,\n  24: _images_vitamins_24_jpg__WEBPACK_IMPORTED_MODULE_41__.default,\n  25: _images_vitamins_25_jpg__WEBPACK_IMPORTED_MODULE_42__.default,\n  26: _images_vitamins_26_jpg__WEBPACK_IMPORTED_MODULE_43__.default,\n  27: _images_vitamins_27_jpg__WEBPACK_IMPORTED_MODULE_44__.default,\n  28: _images_vitamins_28_jpg__WEBPACK_IMPORTED_MODULE_45__.default,\n  29: _images_vitamins_29_jpg__WEBPACK_IMPORTED_MODULE_46__.default,\n  30: _images_vitamins_30_jpg__WEBPACK_IMPORTED_MODULE_47__.default,\n  31: _images_vitamins_31_jpg__WEBPACK_IMPORTED_MODULE_48__.default,\n  32: _images_vitamins_32_jpg__WEBPACK_IMPORTED_MODULE_49__.default,\n  33: _images_vitamins_33_jpg__WEBPACK_IMPORTED_MODULE_50__.default,\n  34: _images_vitamins_34_jpg__WEBPACK_IMPORTED_MODULE_51__.default,\n  35: _images_vitamins_35_jpg__WEBPACK_IMPORTED_MODULE_52__.default,\n  36: _images_vitamins_36_jpg__WEBPACK_IMPORTED_MODULE_53__.default,\n  37: _images_vitamins_37_jpg__WEBPACK_IMPORTED_MODULE_54__.default,\n  38: _images_vitamins_38_jpg__WEBPACK_IMPORTED_MODULE_55__.default,\n  39: _images_vitamins_39_jpg__WEBPACK_IMPORTED_MODULE_56__.default,\n  40: _images_vitamins_40_jpg__WEBPACK_IMPORTED_MODULE_57__.default,\n  41: _images_vitamins_41_jpg__WEBPACK_IMPORTED_MODULE_58__.default,\n  42: _images_vitamins_42_jpg__WEBPACK_IMPORTED_MODULE_59__.default,\n  43: _images_vitamins_43_jpg__WEBPACK_IMPORTED_MODULE_60__.default,\n  44: _images_vitamins_44_jpg__WEBPACK_IMPORTED_MODULE_61__.default,\n  45: _images_vitamins_45_jpg__WEBPACK_IMPORTED_MODULE_62__.default,\n  46: _images_vitamins_46_jpg__WEBPACK_IMPORTED_MODULE_63__.default,\n  47: _images_vitamins_47_jpg__WEBPACK_IMPORTED_MODULE_64__.default,\n  48: _images_vitamins_48_jpg__WEBPACK_IMPORTED_MODULE_65__.default\n};\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images.js?");
 
 /***/ }),
 
@@ -644,6 +644,534 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"76363d2cffe55fddf4dfe30cf229386f.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/choices/9-2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/1.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/1.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"bc1bca1777ca41c0833a4df4217ca97a.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/1.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/10.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/10.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"b3150e6e994b94b31acf1a7e7a2abc01.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/10.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/11.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/11.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"50265f530231ebf7bc9097296cd3dab4.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/11.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/12.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/12.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"52ec6850a8837579a835fb8e238c5bc0.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/12.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/13.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/13.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"8ce03070294d5d6352f2b6ecb4e0b1f0.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/13.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/14.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/14.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"65591a3e72de08adfd836ef7bdcabb63.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/14.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/15.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/15.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"d998a224955ec63bb53e4d4750eecb16.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/15.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/16.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/16.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"41eff0983e3ab6a2777568c43c780eb0.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/16.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/17.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/17.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"eb05aba29a3c29488fcc20684cf3f3ef.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/17.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/18.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/18.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"0d14f8196a974575b3afdb44eaafe99d.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/18.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/19.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/19.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"b829aa46737b0273b9569da430e295d1.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/19.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/2.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/2.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"9bdc9fecb27c389cb2084323436deae3.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/2.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/20.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/20.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"126cc712869c706e2b31decc5625117f.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/20.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/21.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/21.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"777b0eafc2c9870b1bc4932fc2739c9e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/21.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/22.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/22.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"b4854d41e9c00fc1e5e17436083a6740.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/22.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/23.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/23.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"7942d38068cbcfa99a513819dc243b8e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/23.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/24.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/24.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"4f253cbc0c8dfe8c63b5a409fc5bf6d3.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/24.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/25.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/25.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"8c216bf2130748cccae613334cbdf700.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/25.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/26.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/26.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"6ad90978560944cce104486d30a0029b.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/26.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/27.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/27.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"27b38f991c844846141ff940f2119f22.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/27.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/28.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/28.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"75903fcc7f13f91be0ec22d517dff171.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/28.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/29.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/29.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"a63be64d54dce38830f40ea3598606c6.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/29.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/3.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/3.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"768d711f007757d2362abee09b5cd833.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/3.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/30.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/30.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"ed482d11f947d7ea0aa9a5028141db45.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/30.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/31.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/31.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e785ff375c32ede7dbe91dc81c84966e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/31.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/32.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/32.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"47f80dd322b88e6e6a28c216f660d540.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/32.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/33.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/33.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"cc60677d564bae6594165948dcd49d46.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/33.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/34.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/34.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e1bc3bb974e12c6a044745237a3b288d.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/34.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/35.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/35.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"08157ca9969b5bc141378e1ee5ad0597.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/35.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/36.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/36.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"62c39327e68af53797601a388a02ffb6.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/36.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/37.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/37.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"d024072b5c6a318b782b1935924bfe65.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/37.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/38.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/38.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"3448546a9f635a1a94f8ff3dfeff79e7.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/38.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/39.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/39.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"617b3f45d92deb25f95f45b5bb053fed.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/39.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/4.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/4.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"0d6c6aa5bc67d664dc994319aa32d976.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/4.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/40.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/40.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c369c0e4a09c71857fab267dec040f18.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/40.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/41.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/41.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"5b486e5ad6ce77bbc7be94a7cf8d0d71.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/41.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/42.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/42.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"89aebd8cdf244a32c6e3cf437ed1f1bf.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/42.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/43.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/43.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"b1c6700e2dc001f1b03be5160778d71d.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/43.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/44.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/44.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"76f8dfd27475a827ab93d2816970d3ad.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/44.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/45.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/45.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"507cb8dd3eca735af0febbaf6b54bc98.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/45.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/46.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/46.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"aab4ea3b29e32b9a33488f4a87f93be3.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/46.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/47.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/47.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"68813b57a4c081b964cd51107fcb8d65.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/47.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/48.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/vitamins/48.jpg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"abedecfb07312b73bcb4bc5ddeee1e5e.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/48.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/5.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/5.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"d8ad980549a6bd7b8976bb0529f45b70.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/5.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/6.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/6.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"49528978c0cf2d1683962416dbfb17f3.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/6.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/7.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/7.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"01821c62550a67a97798c216c0edf403.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/7.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/8.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/8.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"0558c3c1aab8e92ee76a87349c8107fc.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/8.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/vitamins/9.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/vitamins/9.jpg ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c2da23c6db5ba6780572e0f5d2e02356.jpg\");\n\n//# sourceURL=webpack://project-react-3-najeong-kim/./src/assets/images/vitamins/9.jpg?");
 
 /***/ }),
 
