@@ -23,6 +23,7 @@ export default function ChoicePage() {
   return (
     <div>
       <ChoiceContainer
+        choiceId={id}
         question={question}
         choices={choices}
         onChoiceClick={handleClick}

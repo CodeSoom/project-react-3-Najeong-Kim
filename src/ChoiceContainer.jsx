@@ -6,6 +6,8 @@ import styled from '@emotion/styled';
 
 import { selectChoice } from './actions';
 
+import { choicesImages } from './assets/images';
+
 import Title from './styles/Title';
 import List from './styles/List';
 import Item from './styles/Item';
@@ -18,7 +20,7 @@ const Question = styled.h3({
   fontSize: '20px',
 });
 
-export default function ChoiceContainer({ question, choices, onChoiceClick }) {
+export default function ChoiceContainer({ choiceId, question, choices, onChoiceClick }) {
   const dispatch = useDispatch();
 
   function handleClick(id) {
@@ -31,13 +33,15 @@ export default function ChoiceContainer({ question, choices, onChoiceClick }) {
       <Title>Choice</Title>
       <Question>{question}</Question>
       <List>
+
         {choices.map((choice) => (
           <Item key={choice.id}>
             <ChoiceButton
               type="button"
               onClick={() => handleClick(choice.id)}
             >
-              {choice.text}
+              <img src={choicesImages[(choiceId - 1) * 2 + choice.id]} />
+              <p>{choice.text}</p>
             </ChoiceButton>
           </Item>
         ))}
