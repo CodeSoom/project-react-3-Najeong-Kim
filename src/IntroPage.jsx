@@ -1,6 +1,10 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 import { Link } from 'react-router-dom';
+
+import { get } from './utils';
 
 import styled from '@emotion/styled';
 
@@ -24,11 +28,14 @@ const Start = styled.div({
 });
 
 export default function IntroPage() {
+
+  const userName = useSelector(get('userName'));
+
   return (
     <div>
       <Title>Intro</Title>
       <Text>
-        안녕하세요 여러분!
+        안녕하세요 {userName}님!
         <br />
         당신(You)만을 위한
         <br />
