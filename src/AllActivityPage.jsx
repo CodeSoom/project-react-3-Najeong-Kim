@@ -8,6 +8,18 @@ import { vitaminsImages } from './assets/images';
 
 import styled from '@emotion/styled';
 
+import Title from './styles/Title';
+
+const Back = styled.div({
+  position: 'fixed',
+  right: '10px',
+  '& a': {
+    textDecoration: 'none',
+    fontSize: '18px',
+    color: '#F2C94C',
+  }
+})
+
 const List = styled.ul({
   listStyle: 'none',
   padding: '0',
@@ -45,6 +57,8 @@ const ResultItem = styled.p({
 export default function AllActivityPage() {
   return (
     <div>
+      <Back><Link to="/result">Back</Link></Back>
+      <Title>All Vitamins</Title>
       <List>
         {resultData.map(({ text: { results } }) => (
           results.map(({ activityId, text }) => (

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
 import { Link, useParams } from 'react-router-dom';
 
 import resultData from './resultData';
@@ -12,8 +10,6 @@ import styled from '@emotion/styled';
 
 import Title from './styles/Title';
 import Text from './styles/Text';
-
-import { get } from './utils';
 
 const Back = styled.div({
   position: 'fixed',
