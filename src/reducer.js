@@ -5,6 +5,7 @@ import { equal } from './utils';
 const initialState = {
   selects: [],
   result: null,
+  userName: '',
 };
 
 const reducers = {
@@ -29,6 +30,13 @@ const reducers = {
     return {
       ...state,
       ...initialState,
+    };
+  },
+
+  changeUserName(state, { payload: { name, value } }) {
+    return {
+      ...state,
+      [name]: value,
     };
   },
 };
