@@ -14,6 +14,7 @@ import { clearSelects } from './actions';
 
 import { GlobalStyle } from './globalStyle';
 import HomePage from './HomePage';
+import IntroPage from './IntroPage';
 import ChoicePage from './ChoicePage';
 import ResultPage from './ResultPage';
 import ActivityPage from './ActivityPage';
@@ -54,6 +55,7 @@ export default function App() {
       </Header>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/intro" component={IntroPage} />
         <Route exact path="/choice/:id" component={ChoicePage} />
         <Route exact path="/result" component={ResultPage} />
         <Route exact path="/activity/:id" component={ActivityPage} />
