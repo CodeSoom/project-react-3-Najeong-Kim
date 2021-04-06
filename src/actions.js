@@ -17,3 +17,10 @@ export function clearSelects() {
     type: 'clearSelects',
   };
 }
+
+export function changeUserName({ name, value }) {
+  return {
+    type: 'changeUserName',
+    payload: { name, value },
+  };
+}
