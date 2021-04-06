@@ -18,6 +18,7 @@ import IntroPage from './IntroPage';
 import ChoicePage from './ChoicePage';
 import ResultPage from './ResultPage';
 import ActivityPage from './ActivityPage';
+import AllActivityPage from './AllActivityPage';
 
 const Container = styled.div({
   width: '80%',
@@ -59,6 +60,7 @@ export default function App() {
         <Route exact path="/choice/:id" component={ChoicePage} />
         <Route exact path="/result" component={ResultPage} />
         <Route exact path="/activity/:id" component={ActivityPage} />
+        <Route exact path="/activities" component={AllActivityPage} />
       </Switch>
       <GlobalStyle />
     </Container>

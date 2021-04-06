@@ -104,6 +104,9 @@ export default function ResultContainer() {
           </Item>
         ))}
       </List>
+      <Link to={'/activities'}>
+        <span>See more</span>
+      </Link>
     </Container>
   );
 }
