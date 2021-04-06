@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 
 import { Link, useParams } from 'react-router-dom';
 
+import resultData from './resultData';
+
 import { vitaminsImages } from './assets/images';
 
 import styled from '@emotion/styled';
@@ -47,11 +49,12 @@ const Item = styled.li({
 
 export default function ActivityPage() {
   const activityId = useParams();
-  const { text: { results } } = useSelector(get('result'));
-  const selectActivity = results.find((activity) => (
+
+  const selectActivity = resultData.map(({ text: { results } }) => (results.find((activity) => (
     Number(activityId.id) === Number(activity.activityId)
-  ));
-  const { text, detail, intro } = selectActivity;
+  ))));
+
+  const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / 6)];
 
   return (
     <div>
