@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import ResultContainer from '../containers/ResultContainer';
+import ResultContainer from './ResultContainer';
 
-import { get } from '../utils';
+import { get } from './utils';
 
 import styled from '@emotion/styled';
 

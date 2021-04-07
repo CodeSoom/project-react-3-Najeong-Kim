@@ -8,7 +8,7 @@ const Progress = styled.div({
   fontSize: '25px',
 });
 
-export default function ProgressForm({ id }) {
+export default function ProgressContainer({ id }) {
   return (
     <Progress>{id} / 9</Progress>
   )

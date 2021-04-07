@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux';
 
 import styled from '@emotion/styled';
 
-import { selectChoice } from '../actions';
+import { selectChoice } from './actions';
 
-import { choicesImages } from '../assets/images';
+import { choicesImages } from './assets/images';
 
-import ChoiceButton from '../styles/ChoiceButton';
+import ChoiceButton from './styles/ChoiceButton';
 
 const Question = styled.h3({
   margin: '10% 0 5% 0',

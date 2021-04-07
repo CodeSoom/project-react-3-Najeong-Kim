@@ -4,17 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { vitaminsImages } from '../assets/images';
+import { vitaminsImages } from './assets/images';
 
 import styled from '@emotion/styled';
 
-import { get } from '../utils';
+import { get } from './utils';
 
-import { selectResult } from '../actions';
+import { selectResult } from './actions';
 
-import List from '../styles/List';
-import Item from '../styles/Item';
-import ResultItem from '../styles/ResultItem';
+import List from './styles/List';
+import Item from './styles/Item';
+import ResultItem from './styles/ResultItem';
 
 const Container = styled.div({
   textAlign: 'center',

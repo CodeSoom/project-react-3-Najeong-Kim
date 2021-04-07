@@ -12,13 +12,13 @@ import styled from '@emotion/styled';
 
 import { clearSelects } from './actions';
 
-import { GlobalStyle } from './styles/globalStyle';
-import HomePage from './pages/HomePage';
-import IntroPage from './pages/IntroPage';
-import ChoicePage from './pages/ChoicePage';
-import ResultPage from './pages/ResultPage';
-import ActivityPage from './pages/ActivityPage';
-import AllActivityPage from './pages/AllActivityPage';
+import { GlobalStyle } from './globalStyle';
+import HomePage from './HomePage';
+import IntroPage from './IntroPage';
+import ChoicePage from './ChoicePage';
+import ResultPage from './ResultPage';
+import ActivityPage from './ActivityPage';
+import AllActivityPage from './AllActivityPage';
 
 import Header from './styles/Header';
 
