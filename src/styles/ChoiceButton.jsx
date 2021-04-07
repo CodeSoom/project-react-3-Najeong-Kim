@@ -11,7 +11,7 @@ const ChoiceButton = styled.button({
   fontSize: '22px',
   lineHeight: '35px',
   textAlign: 'left',
-  height: '50vh',
+  height: '55vh',
   padding: '20px',
   borderRadius: '10px',
   cursor: 'pointer',

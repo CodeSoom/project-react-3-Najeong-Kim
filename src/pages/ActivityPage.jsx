@@ -34,9 +34,9 @@ const Wrapper = styled.div({
     paddingBottom: '5vh',
   },
   '& img': {
-    width: '30vw',
+    width: '35vw',
     maxWidth: '400px',
-    height: '30vw',
+    height: '35vw',
     maxHeight: '400px',
     objectFit: 'cover',
     borderRadius: '10px',

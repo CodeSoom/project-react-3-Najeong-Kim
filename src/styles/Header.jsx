@@ -5,7 +5,7 @@ const Header = styled.header({
   gridTemplateColumns: '1fr 6fr 1fr',
   textAlign: 'center',
   fontSize: '15px',
-  margin: '50px 0px',
+  margin: '20px 0px',
   '& h1': {
     margin: '0',
   },

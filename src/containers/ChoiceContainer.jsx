@@ -11,7 +11,7 @@ import { choicesImages } from '../assets/images';
 import ChoiceButton from '../styles/ChoiceButton';
 
 const Question = styled.h3({
-  margin: '10% 0 5% 0',
+  margin: '5% 0',
   textAlign: 'center',
   fontSize: '40px',
 });

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Back = styled.div({
   position: 'fixed',
-  top: '50px',
+  top: '20px',
   left: '3.5vw',
   '& button': {
     textDecoration: 'none',
@@ -15,8 +15,8 @@ const Back = styled.div({
     },
     '&:focus': {
       outline: 'none',
-    }
-  }
+    },
+  },
 });
 
 export default Back;

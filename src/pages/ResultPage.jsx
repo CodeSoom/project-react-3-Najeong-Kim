@@ -24,8 +24,9 @@ const Text = styled.p({
 });
 
 const More = styled.div({
-  marginTop: '20px',
+  margin: '0',
   textAlign: 'center',
+  padding: '30px 0',
   '& a': {
     color: 'white',
     textDecoration: 'none',

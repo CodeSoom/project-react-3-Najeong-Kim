@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 const Container = styled.div({
   display: 'grid',
-  height: '80%',
+  height: '85%',
   gridTemplateColumns: 'repeat(2, 1fr)',
   '& img': {
     width: '90%',
-    height: '80%',
+    height: 'auto',
     margin: 'auto',
   },
   '& > div': {
@@ -14,7 +14,7 @@ const Container = styled.div({
     flexDirection: 'column',
     textAlign: 'center',
     justifyContent: 'space-between',
-    margin: '20% 0',
+    margin: '15% 0',
     '& h2': {
       color: '#FFB61D',
       fontSize: '70px',
@@ -28,7 +28,7 @@ const Container = styled.div({
     '& .introText': {
       color: '#323232',
       fontSize: '22px',
-      lineHeight: '50px',
+      lineHeight: '40px',
     },
     '& .introPlusText': {
       color: 'gray',
