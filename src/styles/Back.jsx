@@ -2,13 +2,17 @@ import styled from '@emotion/styled';
 
 const Back = styled.div({
   position: 'fixed',
-  right: '10px',
+  top: '50px',
+  left: '3.5vw',
   '& button': {
     textDecoration: 'none',
-    fontSize: '18px',
+    fontSize: '30px',
     color: '#F2C94C',
     border: 'none',
     cursor: 'pointer',
+    '&:hover': {
+      color: '#FFB61D',
+    },
     '&:focus': {
       outline: 'none',
     }
