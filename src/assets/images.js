@@ -1,3 +1,5 @@
+import bottles from './images/illustrations/bottles.png';
+
 import choiceImage1 from './images/choices/1-1.jpg';
 import choiceImage2 from './images/choices/1-2.jpg';
 import choiceImage3 from './images/choices/2-1.jpg';
@@ -65,6 +67,10 @@ import vitaminImage45 from './images/vitamins/45.jpg';
 import vitaminImage46 from './images/vitamins/46.jpg';
 import vitaminImage47 from './images/vitamins/47.jpg';
 import vitaminImage48 from './images/vitamins/48.jpg';
+
+export const illustrations = {
+  1: bottles,
+};
 
 
 export const choicesImages = {
