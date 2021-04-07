@@ -8,16 +8,24 @@ import { selectChoice } from './actions';
 
 import { choicesImages } from './assets/images';
 
-import Title from './styles/Title';
-import List from './styles/List';
-import Item from './styles/Item';
 import ChoiceButton from './styles/ChoiceButton';
 
 const Question = styled.h3({
-  paddingLeft: '20px',
-  paddingBottom: '10px',
-  color: '#F2C94C',
-  fontSize: '20px',
+  margin: '10% 0 5% 0',
+  textAlign: 'center',
+  fontSize: '40px',
+});
+
+const List = styled.ul({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  listStyle: 'none',
+  margin: '0',
+  padding: '0',
+});
+
+const Item = styled.li({
+  margin: '5%',
 });
 
 export default function ChoiceContainer({ choiceId, question, choices, onChoiceClick }) {
@@ -30,17 +38,15 @@ export default function ChoiceContainer({ choiceId, question, choices, onChoiceC
 
   return (
     <div>
-      <Title>Choice</Title>
       <Question>{question}</Question>
       <List>
-
         {choices.map((choice) => (
           <Item key={choice.id}>
             <ChoiceButton
               type="button"
               onClick={() => handleClick(choice.id)}
             >
-              <img src={choicesImages[(choiceId - 1) * 2 + choice.id]} />
+              <div><img src={choicesImages[(choiceId - 1) * 2 + choice.id]} /></div>
               <p>{choice.text}</p>
             </ChoiceButton>
           </Item>
