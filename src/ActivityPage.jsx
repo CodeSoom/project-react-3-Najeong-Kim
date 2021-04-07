@@ -42,7 +42,9 @@ export default function ActivityPage() {
     Number(activityId.id) === Number(activity.activityId)
   ))));
 
-  const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / 6)];
+  const ACTIVITY_COUNT = 6;
+
+  const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / ACTIVITY_COUNT)];
 
   function handleClick() {
     return history.goBack();
