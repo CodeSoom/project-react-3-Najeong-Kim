@@ -96,7 +96,7 @@ export default function ResultContainer() {
         {answer?.text?.results.map(({ id, activityId, text }) => (
           <Item key={id}>
             <ResultItem>
-              <Link to={`/activity/${activityId}`}>
+              <Link to={`/activities/${activityId}`}>
                 <img src={vitaminsImages[activityId]} />
                 <span>{text}</span>
               </Link>

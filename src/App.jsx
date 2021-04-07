@@ -59,7 +59,7 @@ export default function App() {
         <Route exact path="/intro" component={IntroPage} />
         <Route exact path="/choice/:id" component={ChoicePage} />
         <Route exact path="/result" component={ResultPage} />
-        <Route exact path="/activity/:id" component={ActivityPage} />
+        <Route exact path="/activities/:id" component={ActivityPage} />
         <Route exact path="/activities" component={AllActivityPage} />
       </Switch>
       <GlobalStyle />

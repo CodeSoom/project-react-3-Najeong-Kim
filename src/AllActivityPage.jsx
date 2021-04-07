@@ -60,7 +60,7 @@ export default function AllActivityPage() {
           results.map(({ activityId, text }) => (
             <Item key={activityId}>
               <ResultItem>
-                <Link to={`/activity/${activityId}`}>
+                <Link to={`/activities/${activityId}`}>
                   <img src={vitaminsImages[activityId]} />
                   <span>{text}</span>
                 </Link>
