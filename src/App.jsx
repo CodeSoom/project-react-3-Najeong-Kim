@@ -24,6 +24,7 @@ import Header from './styles/Header';
 
 const Container = styled.div({
   width: '80%',
+  height: '90vh',
   position: 'absolute',
   left: '50%',
   transform: 'translate(-50%, 0)',
