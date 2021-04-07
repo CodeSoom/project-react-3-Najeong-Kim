@@ -20,26 +20,13 @@ import ResultPage from './ResultPage';
 import ActivityPage from './ActivityPage';
 import AllActivityPage from './AllActivityPage';
 
+import Header from './styles/Header';
+
 const Container = styled.div({
   width: '80%',
   position: 'absolute',
-  top: '50px',
   left: '50%',
   transform: 'translate(-50%, 0)',
-});
-
-const Header = styled.header({
-  textAlign: 'center',
-  '& h1': {
-    fontSize: '50px',
-  },
-  '& a': {
-    color: '#F2C94C',
-    textDecoration: 'none',
-    '&:hover': {
-      color: '#FFB61D',
-    },
-  },
 });
 
 export default function App() {
@@ -52,7 +39,9 @@ export default function App() {
   return (
     <Container>
       <Header>
-        <h1><Link to="/" onClick={handleClickClear}>Vitamin Y</Link></h1>
+        <span></span>
+        <h1>Vitamin Y</h1>
+        <Link to="/" onClick={handleClickClear}><i className="fas fa-home"></i></Link>
       </Header>
       <Switch>
         <Route exact path="/" component={HomePage} />
