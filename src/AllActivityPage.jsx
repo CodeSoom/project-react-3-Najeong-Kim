@@ -10,39 +10,12 @@ import styled from '@emotion/styled';
 
 import Title from './styles/Title';
 import Back from './styles/Back';
+import List from './styles/List';
+import Item from './styles/Item';
+import ResultItem from './styles/ResultItem';
 
-const List = styled.ul({
-  listStyle: 'none',
-  padding: '0',
+const Container = styled.div({
   textAlign: 'center',
-});
-
-const Item = styled.li({
-  backgroundColor: 'white',
-  margin: '10px',
-  padding: '10px',
-});
-
-const ResultItem = styled.p({
-  backgroundColor: 'white',
-  margin: '10px 0',
-  fontSize: '18px',
-  '& a': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    textDecoration: 'none',
-    color: '#737B7D',
-  },
-  '& img': {
-    width: '150px',
-    height: '150px',
-    marginBottom: '20px',
-  },
-  '& span': {
-    backgroundColor: 'white',
-  },
 });
 
 export default function AllActivityPage() {
@@ -52,8 +25,8 @@ export default function AllActivityPage() {
     return history.goBack();
   }
   return (
-    <div>
-      <Back><button type="button" onClick={handleClick}>Back</button></Back>
+    <Container>
+      <Back><button type="button" onClick={handleClick}><i class="fas fa-chevron-left"></i></button></Back>
       <Title>All Vitamins</Title>
       <List>
         {resultData.map(({ text: { results } }) => (
@@ -68,6 +41,6 @@ export default function AllActivityPage() {
             </Item>
           ))))}
       </List>
-    </div>
+    </Container>
   );
 }

@@ -12,53 +12,12 @@ import { get } from './utils';
 
 import { selectResult } from './actions';
 
+import List from './styles/List';
+import Item from './styles/Item';
+import ResultItem from './styles/ResultItem';
+
 const Container = styled.div({
   textAlign: 'center',
-});
-
-const List = styled.ul({
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  listStyle: 'none',
-  margin: '0',
-  padding: '0',
-});
-
-const Item = styled.li({
-  backgroundColor: 'white',
-  margin: '5%',
-  padding: '5px',
-  borderRadius: '10px',
-  '&:hover': {
-    boxShadow: '0px 0px 20px 5px rgba(0, 0, 0, 0.05)',
-  },
-});
-
-const ResultItem = styled.div({
-  backgroundColor: 'white',
-  fontSize: '18px',
-  '& a': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '10px',
-    backgroundColor: 'white',
-    textDecoration: 'none',
-    color: '#737B7D',
-  },
-  '& img': {
-    width: '20vw',
-    maxWidth: '200px',
-    height: '20vw',
-    maxHeight: '200px',
-    objectFit: 'cover',
-    marginBottom: '20px',
-    borderRadius: '10px',
-  },
-  '& span': {
-    backgroundColor: 'white',
-    fontSize: '20px',
-  },
 });
 
 export function calculateResult(selects, result, number, points) {
