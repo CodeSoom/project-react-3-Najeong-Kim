@@ -1,4 +1,4 @@
-import resultData from './data/resultData';
+import resultData from './resultData';
 
 import { equal } from './utils';
 
