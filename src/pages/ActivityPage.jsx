@@ -2,13 +2,13 @@ import React from 'react';
 
 import { useHistory, useParams } from 'react-router-dom';
 
-import resultData from './resultData';
+import resultData from '../data/resultData';
 
-import { vitaminsImages } from './assets/images';
+import { vitaminsImages } from '../assets/images';
 
 import styled from '@emotion/styled';
 
-import Back from './styles/Back';
+import Back from '../styles/Back';
 
 const Container = styled.div({
   display: 'grid',
