@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import HomeContainer from '../containers/HomeContainer';
+import HomeContainer from './HomeContainer';
 
 import styled from '@emotion/styled';
 
 import { keyframes } from '@emotion/react'
 
-import { illustrations } from '../assets/images';
+import { illustrations } from './assets/images';
 
-import Container from '../styles/Container';
+import Container from './styles/Container';
 
 const heartBeat = keyframes`
   0%{

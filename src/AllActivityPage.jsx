@@ -2,17 +2,17 @@ import React from 'react';
 
 import { useHistory, Link } from 'react-router-dom';
 
-import resultData from '../data/resultData';
+import resultData from './resultData';
 
-import { vitaminsImages } from '../assets/images';
+import { vitaminsImages } from './assets/images';
 
 import styled from '@emotion/styled';
 
-import Title from '../styles/Title';
-import Back from '../styles/Back';
-import List from '../styles/List';
-import Item from '../styles/Item';
-import ResultItem from '../styles/ResultItem';
+import Title from './styles/Title';
+import Back from './styles/Back';
+import List from './styles/List';
+import Item from './styles/Item';
+import ResultItem from './styles/ResultItem';
 
 const Container = styled.div({
   textAlign: 'center',

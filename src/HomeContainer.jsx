@@ -2,11 +2,11 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { changeUserName } from '../actions';
+import { changeUserName } from './actions';
 
-import { get } from '../utils';
+import { get } from './utils';
 
-import HomeForm from '../forms/HomeForm';
+import HomeForm from './HomeForm';
 
 export default function HomeContainer() {
   const dispatch = useDispatch();

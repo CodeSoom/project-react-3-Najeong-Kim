@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { get } from '../utils';
+import { get } from './utils';
 
 import styled from '@emotion/styled';
 
-import { illustrations } from '../assets/images';
+import { illustrations } from './assets/images';
 
-import Container from '../styles/Container';
+import Container from './styles/Container';
 
 const Start = styled.div({
   margin: '20px 0',

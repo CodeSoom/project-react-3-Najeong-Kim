@@ -2,11 +2,11 @@ import React from 'react';
 
 import { useHistory, useParams } from 'react-router-dom';
 
-import choiceData from '../data/choiceData';
+import choiceData from './choiceData';
 
-import ChoiceContainer from '../containers/ChoiceContainer';
+import ChoiceContainer from './ChoiceContainer';
 
-import ProgressForm from '../forms/ProgressForm';
+import ProgressContainer from './ProgressContainer';
 
 export default function ChoicePage() {
   const { id } = useParams();
@@ -28,7 +28,7 @@ export default function ChoicePage() {
         choices={choices}
         onChoiceClick={handleClick}
       />
-      <ProgressForm
+      <ProgressContainer
         id={id}
       />
     </div>
