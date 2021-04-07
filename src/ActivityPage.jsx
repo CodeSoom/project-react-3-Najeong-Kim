@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import resultData from './resultData';
 
@@ -10,16 +10,7 @@ import styled from '@emotion/styled';
 
 import Title from './styles/Title';
 import Text from './styles/Text';
-
-const Back = styled.div({
-  position: 'fixed',
-  right: '10px',
-  '& a': {
-    textDecoration: 'none',
-    fontSize: '18px',
-    color: '#F2C94C',
-  }
-})
+import Back from './styles/Back';
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -45,6 +36,7 @@ const Item = styled.li({
 
 export default function ActivityPage() {
   const activityId = useParams();
+  const history = useHistory();
 
   const selectActivity = resultData.map(({ text: { results } }) => (results.find((activity) => (
     Number(activityId.id) === Number(activity.activityId)
@@ -52,9 +44,13 @@ export default function ActivityPage() {
 
   const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / 6)];
 
+  function handleClick() {
+    return history.goBack();
+  }
+
   return (
     <div>
-      <Back><Link to="/result">Back</Link></Back>
+      <Back><button type="button" onClick={handleClick}>Back</button></Back>
       <Title>{text}</Title>
       <Wrapper>
         <img src={vitaminsImages[activityId.id]} />
