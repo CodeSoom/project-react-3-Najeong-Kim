@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 import ChoiceContainer from './ChoiceContainer';
 
-import choiceData from '../fixtures/choiceData';
+import choiceData from '../../fixtures/choiceData';
 
 describe('ChoiceContainer', () => {
   const dispatch = jest.fn();
@@ -16,6 +16,8 @@ describe('ChoiceContainer', () => {
     dispatch.mockClear();
 
     useDispatch.mockImplementation(() => dispatch);
+
+    jest.clearAllMocks();
   });
 
   function renderChoiceContainer({ question, choices } = {}) {
@@ -27,10 +29,6 @@ describe('ChoiceContainer', () => {
       />,
     );
   }
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
 
   context('clicks a choice button', () => {
     it('listens click event', () => {

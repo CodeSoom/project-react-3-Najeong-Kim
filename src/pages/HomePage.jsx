@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import HomeContainer from '../containers/HomeContainer';
-
 import styled from '@emotion/styled';
 
-import { keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react';
+
+import HomeContainer from '../containers/HomeContainer';
 
 import { illustrations } from '../assets/images';
 
@@ -25,7 +25,7 @@ const heartBeat = keyframes`
     color: gainsboro;
     transform: none;
   }
-`
+`;
 
 const Start = styled.div({
   marginTop: '40px',
@@ -46,7 +46,7 @@ const Start = styled.div({
 export default function HomePage() {
   return (
     <Container>
-      <img src={illustrations[1]} />
+      <img src={illustrations[1]} alt="" />
       <div>
         <h2>Vitamin Y</h2>
         <p className="homeText">
@@ -55,7 +55,7 @@ export default function HomePage() {
           이름을 알려주실래요?
         </p>
         <HomeContainer />
-        <Start><Link to="/intro"><i className="fas fa-tablets"></i></Link></Start>
+        <Start><Link to="/intro"><i className="fas fa-tablets" /></Link></Start>
       </div>
     </Container>
   );

@@ -2,11 +2,11 @@ import React from 'react';
 
 import { useHistory, useParams } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
 import resultData from '../data/resultData';
 
 import { vitaminsImages } from '../assets/images';
-
-import styled from '@emotion/styled';
 
 import Back from '../styles/Back';
 
@@ -14,9 +14,9 @@ const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   height: '70vh',
-})
+});
 
-const Wrapper = styled.div({
+const WrapperLeft = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -43,7 +43,7 @@ const Wrapper = styled.div({
   },
 });
 
-const Wrapper2 = styled.div({
+const WrapperRight = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -54,12 +54,11 @@ const Wrapper2 = styled.div({
     color: '#323232',
     fontSize: '22px',
     lineHeight: '35px',
-  }
-})
+  },
+});
 
 const List = styled.ul({
   listStyle: 'none',
-  padding: '0',
   textAlign: 'center',
   backgroundColor: 'rgba(242, 201, 76, 0.2)',
   borderRadius: '10px',
@@ -92,13 +91,13 @@ export default function ActivityPage() {
 
   return (
     <div>
-      <Back><button type="button" onClick={handleClick}><i class="fas fa-chevron-left"></i></button></Back>
+      <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
       <Container>
-        <Wrapper>
+        <WrapperLeft>
           <h2>{text}</h2>
-          <div><img src={vitaminsImages[activityId.id]} /></div>
-        </Wrapper>
-        <Wrapper2>
+          <div><img src={vitaminsImages[activityId.id]} alt="" /></div>
+        </WrapperLeft>
+        <WrapperRight>
           <p>
             {detail}
           </p>
@@ -112,7 +111,7 @@ export default function ActivityPage() {
             </Item>
           ))}
           </List>
-        </Wrapper2>
+        </WrapperRight>
       </Container>
     </div>
   );

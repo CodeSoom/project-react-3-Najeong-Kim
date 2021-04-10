@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { vitaminsImages } from '../assets/images';
-
 import styled from '@emotion/styled';
+
+import { vitaminsImages } from '../assets/images';
 
 import { get } from '../utils';
 
@@ -65,7 +65,7 @@ export default function ResultContainer() {
           <Item key={id}>
             <ResultItem>
               <Link to={`/activities/${activityId}`}>
-                <img src={vitaminsImages[activityId]} />
+                <img src={vitaminsImages[activityId]} alt="" />
                 <span>{text}</span>
               </Link>
             </ResultItem>

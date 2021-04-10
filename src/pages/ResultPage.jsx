@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
 import ResultContainer from '../containers/ResultContainer';
 
 import { get } from '../utils';
-
-import styled from '@emotion/styled';
 
 const Title = styled.h2({
   margin: '1% 0',
@@ -46,7 +46,8 @@ export default function ResultPage() {
     <div>
       <Title>Result</Title>
       <Text>
-        {userName}님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
+        {userName}
+        님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
       </Text>
       <ResultContainer />
       <More>

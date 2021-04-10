@@ -16,16 +16,13 @@ describe('HomeForm', () => {
     );
   }
 
-  const { queryByRole } = renderHomeForm();
-
+  const { queryByPlaceholderText } = renderHomeForm();
 
   it('listens change event', () => {
-    fireEvent.change(queryByRole('input'), {
+    fireEvent.change(queryByPlaceholderText('이름을 입력하세요.'), {
       target: { value: '나정' },
     });
 
     expect(handleChange).toBeCalled();
-  })
-
-
+  });
 });

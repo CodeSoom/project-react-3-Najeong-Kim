@@ -16,7 +16,5 @@ describe('ProgressForm', () => {
 
     expect(container).toHaveTextContent('1');
     expect(container).toHaveTextContent('9');
-  })
-
-
+  });
 });

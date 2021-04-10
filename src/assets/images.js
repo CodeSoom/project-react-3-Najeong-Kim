@@ -72,7 +72,6 @@ export const illustrations = {
   1: bottles,
 };
 
-
 export const choicesImages = {
   1: choiceImage1,
   2: choiceImage2,
@@ -92,7 +91,7 @@ export const choicesImages = {
   16: choiceImage16,
   17: choiceImage17,
   18: choiceImage18,
-}
+};
 
 export const vitaminsImages = {
   1: vitaminImage1,
@@ -143,4 +142,4 @@ export const vitaminsImages = {
   46: vitaminImage46,
   47: vitaminImage47,
   48: vitaminImage48,
-} 
+};
