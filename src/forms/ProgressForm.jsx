@@ -9,7 +9,9 @@ const Progress = styled.div({
 });
 
 export default function ProgressForm({ id }) {
+  const CHOICE_COUNT = 9;
+
   return (
-    <Progress>{id} / 9</Progress>
+    <Progress>{id} / {CHOICE_COUNT}</Progress>
   )
 }

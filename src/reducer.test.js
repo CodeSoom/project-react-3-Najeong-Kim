@@ -6,6 +6,7 @@ describe('reducer', () => {
     const initialState = {
       selects: [],
       result: null,
+      userName: '',
     };
 
     it('returns initialState', () => {
