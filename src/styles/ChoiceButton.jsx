@@ -12,7 +12,6 @@ const ChoiceButton = styled.button({
   lineHeight: '35px',
   textAlign: 'left',
   height: '55vh',
-  padding: '20px',
   borderRadius: '10px',
   cursor: 'pointer',
   '&:hover': {
@@ -39,7 +38,7 @@ const ChoiceButton = styled.button({
   '& p': {
     margin: '10px 0',
     backgroundColor: 'white',
-  }
+  },
 });
 
 export default ChoiceButton;

@@ -12,6 +12,8 @@ export default function ProgressForm({ id }) {
   const CHOICE_COUNT = 9;
 
   return (
-    <Progress>{id} / {CHOICE_COUNT}</Progress>
-  )
+    <Progress>
+      {id} / {CHOICE_COUNT}
+    </Progress>
+  );
 }

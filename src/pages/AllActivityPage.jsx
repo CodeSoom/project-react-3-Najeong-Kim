@@ -2,11 +2,11 @@ import React from 'react';
 
 import { useHistory, Link } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
 import resultData from '../data/resultData';
 
 import { vitaminsImages } from '../assets/images';
-
-import styled from '@emotion/styled';
 
 import Title from '../styles/Title';
 import Back from '../styles/Back';
@@ -26,7 +26,7 @@ export default function AllActivityPage() {
   }
   return (
     <Container>
-      <Back><button type="button" onClick={handleClick}><i class="fas fa-chevron-left"></i></button></Back>
+      <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
       <Title>All Vitamins</Title>
       <List>
         {resultData.map(({ text: { results } }) => (
@@ -34,7 +34,7 @@ export default function AllActivityPage() {
             <Item key={activityId}>
               <ResultItem>
                 <Link to={`/activities/${activityId}`}>
-                  <img src={vitaminsImages[activityId]} />
+                  <img src={vitaminsImages[activityId]} alt="" />
                   <span>{text}</span>
                 </Link>
               </ResultItem>

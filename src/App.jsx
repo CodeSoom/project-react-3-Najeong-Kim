@@ -40,9 +40,9 @@ export default function App() {
   return (
     <Container>
       <Header>
-        <span></span>
+        <span />
         <h1>Vitamin Y</h1>
-        <Link to="/" onClick={handleClickClear}><i className="fas fa-home"></i></Link>
+        <Link to="/" data-testid="home" onClick={handleClickClear}><i className="fas fa-home" /></Link>
       </Header>
       <Switch>
         <Route exact path="/" component={HomePage} />

@@ -28,7 +28,9 @@ const Item = styled.li({
   margin: '5%',
 });
 
-export default function ChoiceContainer({ choiceId, question, choices, onChoiceClick }) {
+export default function ChoiceContainer({
+  choiceId, question, choices, onChoiceClick,
+}) {
   const dispatch = useDispatch();
 
   function handleClick(id) {
@@ -46,7 +48,7 @@ export default function ChoiceContainer({ choiceId, question, choices, onChoiceC
               type="button"
               onClick={() => handleClick(choice.id)}
             >
-              <div><img src={choicesImages[(choiceId - 1) * 2 + choice.id]} /></div>
+              <div><img src={choicesImages[(choiceId - 1) * 2 + choice.id]} alt="" /></div>
               <p>{choice.text}</p>
             </ChoiceButton>
           </Item>
