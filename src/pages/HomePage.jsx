@@ -2,46 +2,12 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import styled from '@emotion/styled';
-
-import { keyframes } from '@emotion/react';
-
 import HomeContainer from '../containers/HomeContainer';
 
 import { illustrations } from '../assets/images';
 
 import Container from '../styles/Container';
-
-const heartBeat = keyframes`
-  0%{
-    color: gainsboro;
-    transform: none;
-  }
-  50%{
-    color: #FFB61D;
-    transform: rotateZ(20deg) scale(1.5);
-  }
-  100%{
-    color: gainsboro;
-    transform: none;
-  }
-`;
-
-const Start = styled.div({
-  marginTop: '40px',
-  textAlign: 'center',
-  '& a': {
-    fontSize: '60px',
-    color: 'gainsboro',
-    textDecoration: 'none',
-    padding: '8px 15px',
-    borderRadius: '10px',
-    '& i:hover': {
-      willChange: 'transform',
-      animation: `${heartBeat} 1s linear infinite`,
-    },
-  },
-});
+import VitaminButton from '../styles/VitaminButton';
 
 export default function HomePage() {
   return (
@@ -52,10 +18,14 @@ export default function HomePage() {
         <p className="homeText">
           당신의 비타민 Y를 찾아보세요
           <br />
+          아래 비타민을 클릭하면
+          <br />
+          테스트를 시작할 수 있어요!
+          <br />
           이름을 알려주실래요?
         </p>
         <HomeContainer />
-        <Start><Link to="/intro"><i className="fas fa-tablets" /></Link></Start>
+        <VitaminButton><Link to="/intro"><i className="fas fa-tablets" /></Link></VitaminButton>
       </div>
     </Container>
   );
