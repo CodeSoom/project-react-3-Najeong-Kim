@@ -10,6 +10,8 @@ import { choicesImages } from '../assets/images';
 
 import ChoiceButton from '../styles/ChoiceButton';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const Question = styled.h3({
   margin: '5% 0',
   textAlign: 'center',
@@ -48,7 +50,12 @@ export default function ChoiceContainer({
               type="button"
               onClick={() => handleClick(choice.id)}
             >
-              <div><img src={choicesImages[(choiceId - 1) * 2 + choice.id]} alt="" /></div>
+              <div>
+                <LazyLoadImage
+                  alt=''
+                  src={choicesImages[(choiceId - 1) * 2 + choice.id]}
+                />
+              </div>
               <p>{choice.text}</p>
             </ChoiceButton>
           </Item>
