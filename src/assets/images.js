@@ -66,6 +66,15 @@ import vitaminImage46 from './images/vitamins/46.jpeg';
 import vitaminImage47 from './images/vitamins/47.jpeg';
 import vitaminImage48 from './images/vitamins/48.jpeg';
 
+import typeImage1 from './images/types/type1.jpg'
+import typeImage2 from './images/types/type2.jpg'
+import typeImage3 from './images/types/type3.jpg'
+import typeImage4 from './images/types/type4.jpg'
+import typeImage5 from './images/types/type5.jpg'
+import typeImage6 from './images/types/type6.jpg'
+import typeImage7 from './images/types/type7.jpg'
+import typeImage8 from './images/types/type8.jpg'
+
 import bottles from './images/illustrations/bottles.png';
 
 export const illustrations = {
@@ -142,4 +151,15 @@ export const vitaminsImages = {
   46: vitaminImage46,
   47: vitaminImage47,
   48: vitaminImage48,
+};
+
+export const typesImages = {
+  1: typeImage1,
+  2: typeImage2,
+  3: typeImage3,
+  4: typeImage4,
+  5: typeImage5,
+  6: typeImage6,
+  7: typeImage7,
+  8: typeImage8,
 };
