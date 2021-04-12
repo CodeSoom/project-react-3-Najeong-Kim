@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
+import { typesImages } from '../assets/images';
+
 import ResultContainer from '../containers/ResultContainer';
 
 import { get } from '../utils';
@@ -42,6 +44,7 @@ const More = styled.div({
 
 export default function ResultPage() {
   const userName = useSelector(get('userName'));
+
   return (
     <div>
       <Title>Result</Title>

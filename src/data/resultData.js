@@ -2,6 +2,8 @@ const resultData = [
   {
     id: 1,
     text: {
+      type: '끈기 있는 탐구자',
+      story: '사소한 것에도 많은 관심을 기울이는',
       results: [
         {
           id: 1,
@@ -93,6 +95,8 @@ const resultData = [
   {
     id: 2,
     text: {
+      type: '차분한 여행가',
+      story: '하루하루를 소중하게 생각하는',
       results: [
         {
           id: 1,
@@ -184,6 +188,8 @@ const resultData = [
   {
     id: 3,
     text: {
+      type: '호기심 많은 탐험가',
+      story: '자신에게 색다른 추억을 선물하고 싶은',
       results: [
         {
           id: 1,
@@ -275,6 +281,8 @@ const resultData = [
   {
     id: 4,
     text: {
+      type: '자유로운 나그네',
+      story: '일상을 아낌없이 누리고 싶은',
       results: [
         {
           id: 1,
@@ -366,6 +374,8 @@ const resultData = [
   {
     id: 5,
     text: {
+      type: '도전적인 혁신가',
+      story: '항상 열정과 함께 살아가는',
       results: [
         {
           id: 1,
@@ -457,6 +467,8 @@ const resultData = [
   {
     id: 6,
     text: {
+      type: '여유로운 몽상가',
+      story: '지금 이 순간을 즐기고 싶은',
       results: [
         {
           id: 1,
@@ -548,6 +560,8 @@ const resultData = [
   {
     id: 7,
     text: {
+      type: '용감한 개척자',
+      story: '인생을 한 마디로 표현할 수 없는',
       results: [
         {
           id: 1,
@@ -639,6 +653,8 @@ const resultData = [
   {
     id: 8,
     text: {
+      type: '적극적인 활동가',
+      story: '흘러가는 시간을 그냥 지나칠 수 없는',
       results: [
         {
           id: 1,

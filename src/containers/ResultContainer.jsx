@@ -8,6 +8,8 @@ import styled from '@emotion/styled';
 
 import { vitaminsImages } from '../assets/images';
 
+import { typesImages } from '../assets/images';
+
 import { get } from '../utils';
 
 import { selectResult } from '../actions';
@@ -18,6 +20,16 @@ import ResultItem from '../styles/ResultItem';
 
 const Container = styled.div({
   textAlign: 'center',
+});
+
+const Type = styled.div({
+  '& img': {
+    width: '300px',
+    height: '250px',
+  },
+  '& p': {
+    fontSize: '25px',
+  },
 });
 
 export function calculateResult(selects, result, number, points) {
@@ -58,8 +70,20 @@ export default function ResultContainer() {
     dispatch(selectResult(selectResultCase(result)));
   }, []);
 
+  const userName = useSelector(get('userName'));
+
   return (
     <Container>
+      <Type>
+        <img src={typesImages[answer?.id]} alt="" />
+        <p>
+          {userName}님의 유형은 {answer?.text?.type}입니다
+          <br />
+          {answer?.text?.story}
+          <br />
+          {userName}님을 위한 비타민 Y가 제조되었습니다
+        </p>
+      </Type>
       <List>
         {answer?.text?.results.map(({ id, activityId, text }) => (
           <Item key={id}>
@@ -72,6 +96,6 @@ export default function ResultContainer() {
           </Item>
         ))}
       </List>
-    </Container>
+    </Container >
   );
 }
