@@ -8,4 +8,12 @@ const List = styled.ul({
   padding: '0',
 });
 
-export default List;
+const MobileList = styled.ul({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  listStyle: 'none',
+  margin: '0',
+  padding: '0',
+});
+
+export { List, MobileList };

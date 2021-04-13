@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import { typesImages } from '../assets/images';
+import { Desktop, Mobile } from '../MediaQuery'
 
 import ResultContainer from '../containers/ResultContainer';
 
@@ -23,6 +23,13 @@ const Text = styled.p({
   color: 'gray',
   textAlign: 'center',
   fontSize: '25px',
+});
+
+const MobileText = styled.p({
+  margin: '10px 0',
+  color: 'gray',
+  textAlign: 'center',
+  fontSize: '20px',
 });
 
 const More = styled.div({
@@ -47,17 +54,31 @@ export default function ResultPage() {
 
   return (
     <div>
-      <Title>Result</Title>
-      <Text>
-        {userName}
+      <Desktop>
+        <Title>Result</Title>
+        <Text>
+          {userName}
         님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
       </Text>
-      <ResultContainer />
-      <More>
-        <Link to={'/activities'}>
-          더 많은 비타민 보기
+        <ResultContainer />
+        <More>
+          <Link to={'/activities'}>
+            더 많은 비타민 보기
         </Link>
-      </More>
+        </More>
+      </Desktop>
+      <Mobile>
+        <MobileText>
+          {userName}
+        님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
+      </MobileText>
+        <ResultContainer />
+        <More>
+          <Link to={'/activities'}>
+            더 많은 비타민 보기
+        </Link>
+        </More>
+      </Mobile>
     </div>
   );
 }
