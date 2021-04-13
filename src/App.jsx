@@ -25,7 +25,7 @@ import AllActivityPage from './pages/AllActivityPage';
 import Header from './styles/Header';
 
 const Container = styled.div({
-  width: '80%',
+  width: '95%',
   height: '90vh',
   position: 'absolute',
   left: '50%',

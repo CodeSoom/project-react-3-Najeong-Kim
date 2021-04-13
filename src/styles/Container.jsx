@@ -2,10 +2,12 @@ import styled from '@emotion/styled';
 
 const Container = styled.div({
   display: 'grid',
-  height: '85%',
+  width: '80vw',
+  height: '80vh',
+  margin: 'auto',
   gridTemplateColumns: 'repeat(2, 1fr)',
   '& img': {
-    width: '90%',
+    width: '70%',
     height: 'auto',
     margin: 'auto',
   },
