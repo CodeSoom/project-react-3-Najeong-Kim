@@ -3,6 +3,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Input = styled.input({
+  width: '70%',
+  maxWidth: '300px',
   backgroundColor: '#E7EAEE',
   padding: '15px 40px',
   border: 'none',
