@@ -30,13 +30,13 @@ const MobileContainer = styled.div({
     },
     '& .introText': {
       color: '#323232',
-      fontSize: '22px',
-      lineHeight: '40px',
+      fontSize: '20px',
+      lineHeight: '28px',
     },
     '& .introPlusText': {
       color: 'gray',
-      fontSize: '18px',
-      lineHeight: '30px',
+      fontSize: '15px',
+      lineHeight: '20px',
     },
   },
 });
