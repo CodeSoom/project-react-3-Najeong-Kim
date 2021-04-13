@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useHistory, useParams } from 'react-router-dom';
 
+import { Desktop, Mobile } from '../MediaQuery'
+
 import styled from '@emotion/styled';
 
 import resultData from '../data/resultData';
@@ -14,6 +16,30 @@ const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   height: '70vh',
+});
+
+const MobileContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'start',
+  textAlign: 'center',
+  '& h2': {
+    color: '#FFB61D',
+    fontSize: '30px',
+    margin: '0',
+  },
+  '& img': {
+    width: '250px',
+    height: '200px',
+    objectFit: 'cover',
+    margin: '5% auto',
+    borderRadius: '10px',
+    boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
+  },
+  '& p': {
+    margin: '5%',
+    fontSize: '20px',
+  },
 });
 
 const WrapperLeft = styled.div({
@@ -66,7 +92,24 @@ const List = styled.ul({
   fontSize: '25px',
 });
 
+const MobileList = styled.ul({
+  listStyle: 'none',
+  textAlign: 'center',
+  backgroundColor: 'rgba(242, 201, 76, 0.2)',
+  borderRadius: '10px',
+  margin: '5%',
+  padding: '10px',
+  fontSize: '20px',
+});
+
 const Item = styled.li({
+  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+  margin: '10px',
+  padding: '10px',
+  borderRadius: '10px',
+});
+
+const MobileItem = styled.li({
   backgroundColor: 'rgba(255, 255, 255, 0.8)',
   margin: '10px',
   padding: '10px',
@@ -91,28 +134,50 @@ export default function ActivityPage() {
 
   return (
     <div>
-      <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
-      <Container>
-        <WrapperLeft>
+      <Desktop>
+        <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+        <Container>
+          <WrapperLeft>
+            <h2>{text}</h2>
+            <div><img src={vitaminsImages[activityId.id]} alt="" /></div>
+          </WrapperLeft>
+          <WrapperRight>
+            <p>
+              {detail}
+            </p>
+            <List>
+              연관 비타민
+            {intro.map(({
+              id, text,
+            }) => (
+              <Item key={id}>
+                {text}
+              </Item>
+            ))}
+            </List>
+          </WrapperRight>
+        </Container>
+      </Desktop>
+      <Mobile>
+        <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+        <MobileContainer>
           <h2>{text}</h2>
-          <div><img src={vitaminsImages[activityId.id]} alt="" /></div>
-        </WrapperLeft>
-        <WrapperRight>
+          <img src={vitaminsImages[activityId.id]} alt="" />
           <p>
             {detail}
           </p>
-          <List>
+          <MobileList>
             연관 비타민
             {intro.map(({
             id, text,
           }) => (
-            <Item key={id}>
+            <MobileItem key={id}>
               {text}
-            </Item>
+            </MobileItem>
           ))}
-          </List>
-        </WrapperRight>
-      </Container>
+          </MobileList>
+        </MobileContainer>
+      </Mobile>
     </div>
   );
 }
