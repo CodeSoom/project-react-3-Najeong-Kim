@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import { Desktop, Mobile } from '../MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery'
 
 import { vitaminsImages } from '../assets/images';
 
@@ -16,40 +16,13 @@ import { get } from '../utils';
 
 import { selectResult } from '../actions';
 
+import { Type, MobileType } from '../styles/Type';
 import { List, MobileList } from '../styles/List';
 import { Item, MobileItem } from '../styles/Item';
 import { ResultItem, MobileResultItem } from '../styles/ResultItem';
 
 const Container = styled.div({
   textAlign: 'center',
-});
-
-const Type = styled.div({
-  '& img': {
-    width: '300px',
-    height: '250px',
-    marginTop: '20px',
-    objectFit: 'cover',
-    borderRadius: '20px',
-    boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
-  },
-  '& p': {
-    fontSize: '25px',
-  },
-});
-
-const MobileType = styled.div({
-  '& img': {
-    width: '60vw',
-    height: '25vh',
-    objectFit: 'cover',
-    margin: '5% 0',
-    borderRadius: '10px',
-    boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
-  },
-  '& p': {
-    fontSize: '18px',
-  },
 });
 
 export function calculateResult(selects, result, number, points) {

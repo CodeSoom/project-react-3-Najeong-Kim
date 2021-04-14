@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { Desktop, Mobile } from '../MediaQuery'
-
-import styled from '@emotion/styled';
+import { Desktop, Mobile } from '../styles/MediaQuery'
 
 import { get } from '../utils';
 
@@ -14,22 +12,7 @@ import { illustrations } from '../assets/images';
 
 import Container from '../styles/Container';
 import MobileContainer from '../styles/MobileContainer';
-
-const Start = styled.div({
-  margin: '20px 0',
-  textAlign: 'center',
-  '& a': {
-    fontSize: '25px',
-    color: 'white',
-    textDecoration: 'none',
-    backgroundColor: '#F2C94C',
-    padding: '10px 18px',
-    borderRadius: '10px',
-    '&:hover': {
-      backgroundColor: '#FFB61D',
-    },
-  },
-});
+import StartButton from '../styles/StartButton';
 
 export default function IntroPage() {
   const userName = useSelector(get('userName'));
@@ -51,7 +34,7 @@ export default function IntroPage() {
               <br />
               당신의 비타민 Y를 찾아보세요!
             </p>
-            <Start><Link to="/choice/1">Start</Link></Start>
+            <StartButton><Link to="/choice/1">Start</Link></StartButton>
             <p className="introPlusText">
               비타민 Y는 당신의 삶에 행복을 주는 활동입니다
               <br />
@@ -76,7 +59,7 @@ export default function IntroPage() {
               <br />
               당신의 비타민 Y를 찾아보세요!
             </p>
-            <Start><Link to="/choice/1">Start</Link></Start>
+            <StartButton><Link to="/choice/1">Start</Link></StartButton>
             <p className="introPlusText">
               비타민 Y는 당신의 삶에 행복을 주는 활동입니다
               <br />

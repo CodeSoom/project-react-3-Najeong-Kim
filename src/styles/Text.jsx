@@ -1,10 +1,18 @@
 import styled from '@emotion/styled';
 
+
 const Text = styled.p({
-  paddingLeft: '10px',
-  color: '#323232',
-  fontSize: '18px',
-  lineHeight: '35px',
+  margin: '10px 0',
+  color: 'gray',
+  textAlign: 'center',
+  fontSize: '25px',
 });
 
-export default Text;
+const MobileText = styled.p({
+  margin: '10px 0',
+  color: 'gray',
+  textAlign: 'center',
+  fontSize: '20px',
+});
+
+export { Text, MobileText };
