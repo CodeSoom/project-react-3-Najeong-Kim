@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Desktop, Mobile } from '../MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery'
 
 import { Link } from 'react-router-dom';
 

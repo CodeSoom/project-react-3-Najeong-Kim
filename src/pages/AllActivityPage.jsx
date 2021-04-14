@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import { Desktop, Mobile } from '../MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery';
 
 import resultData from '../data/resultData';
 

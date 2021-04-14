@@ -8,7 +8,7 @@ import {
 
 import { useDispatch } from 'react-redux';
 
-import { Desktop, Mobile } from './MediaQuery'
+import { Desktop, Mobile } from './styles/MediaQuery'
 
 import styled from '@emotion/styled';
 
