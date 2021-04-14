@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useHistory, useParams } from 'react-router-dom';
 
-import { Desktop, Mobile } from '../MediaQuery'
+import { Desktop, Mobile } from '../MediaQuery';
 
 import styled from '@emotion/styled';
 
@@ -116,6 +116,8 @@ const MobileItem = styled.li({
   borderRadius: '10px',
 });
 
+const ACTIVITY_COUNT = 6;
+
 export default function ActivityPage() {
   const activityId = useParams();
   const history = useHistory();
@@ -123,8 +125,6 @@ export default function ActivityPage() {
   const selectActivity = resultData.map(({ text: { results } }) => (results.find((activity) => (
     Number(activityId.id) === Number(activity.activityId)
   ))));
-
-  const ACTIVITY_COUNT = 6;
 
   const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / ACTIVITY_COUNT)];
 
