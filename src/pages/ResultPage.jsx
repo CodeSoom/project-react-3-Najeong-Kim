@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { Desktop, Mobile } from '../styles/MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery';
 
 import ResultContainer from '../containers/ResultContainer';
 
@@ -23,25 +23,25 @@ export default function ResultPage() {
         <Title>Result</Title>
         <Text>
           {userName}
-        님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
-      </Text>
+          님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
+        </Text>
         <ResultContainer />
         <More>
-          <Link to={'/activities'}>
+          <Link to="/activities">
             더 많은 비타민 보기
-        </Link>
+          </Link>
         </More>
       </Desktop>
       <Mobile>
         <MobileText>
           {userName}
-        님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
-      </MobileText>
+          님의 비타민 Y는 아래와 같습니다! 짜잔~ 😁
+        </MobileText>
         <ResultContainer />
         <More>
-          <Link to={'/activities'}>
+          <Link to="/activities">
             더 많은 비타민 보기
-        </Link>
+          </Link>
         </More>
       </Mobile>
     </div>

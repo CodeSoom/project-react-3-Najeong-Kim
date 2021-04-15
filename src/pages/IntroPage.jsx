@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 
-import { Desktop, Mobile } from '../styles/MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery';
 
 import { get } from '../utils';
 

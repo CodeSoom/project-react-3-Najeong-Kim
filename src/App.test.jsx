@@ -6,15 +6,19 @@ import { fireEvent, render } from '@testing-library/react';
 
 import { useDispatch } from 'react-redux';
 
+import { useMediaQuery } from 'react-responsive';
+
 import App from './App';
+
+jest.mock('react-responsive');
 
 describe('App', () => {
   beforeEach(() => {
     const dispatch = jest.fn();
 
     useDispatch.mockImplementation(() => dispatch);
+    useMediaQuery.mockImplementation(() => true);
   });
-  const handleClickClear = jest.fn();
 
   function renderApp({ path }) {
     return render(
@@ -68,11 +72,11 @@ describe('App', () => {
 
   context('clicks header', () => {
     it('clears state', () => {
-      const { getByTestId } = renderApp({ path: '/intro' });
+      const { container, getAllByTestId } = renderApp({ path: '/intro' });
 
-      fireEvent.click(getByTestId('home'));
+      fireEvent.click(getAllByTestId('home')[0]);
 
-      expect(handleClickClear).toBeCalled();
+      expect(container).toHaveTextContent(/이름을/);
     });
   });
 });

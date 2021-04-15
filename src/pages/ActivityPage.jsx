@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { Desktop, Mobile } from '../styles/MediaQuery';
 
@@ -8,32 +8,31 @@ import resultData from '../data/resultData';
 
 import { vitaminsImages } from '../assets/images';
 
+import BackForm from '../forms/BackForm';
+
 import Back from '../styles/Back';
 import { ActivityContainer, ActivityMobileContainer } from '../styles/ActivityContainer';
 import { WrapperLeft, WrapperRight } from '../styles/Wrapper';
-import { RelatedList, RelatedMobileList } from '../styles/RelatedList.jsx';
+import { RelatedList, RelatedMobileList } from '../styles/RelatedList';
 import { RelatedItem, RelatedMobileItem } from '../styles/RelatedItem';
 
 const ACTIVITY_COUNT = 6;
 
 export default function ActivityPage() {
   const activityId = useParams();
-  const history = useHistory();
 
   const selectActivity = resultData.map(({ text: { results } }) => (results.find((activity) => (
     Number(activityId.id) === Number(activity.activityId)
   ))));
 
-  const { text, detail, intro } = selectActivity[parseInt((activityId.id - 1) / ACTIVITY_COUNT)];
-
-  function handleClick() {
-    return history.goBack();
-  }
+  const { text, detail, intro } = selectActivity[parseInt(
+    (activityId.id - 1) / ACTIVITY_COUNT, 10,
+  )];
 
   return (
     <div>
       <Desktop>
-        <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+        <Back><BackForm /></Back>
         <ActivityContainer>
           <WrapperLeft>
             <h2>{text}</h2>
@@ -44,20 +43,16 @@ export default function ActivityPage() {
               {detail}
             </p>
             <RelatedList>
-              연관 비타민
-            {intro.map(({
-              id, text,
-            }) => (
-              <RelatedItem key={id}>
-                {text}
-              </RelatedItem>
-            ))}
+              <p>연관 비타민</p>
+              {intro.map(({ id, text: relatedText }) => (
+                <RelatedItem key={id}>{relatedText}</RelatedItem>
+              ))}
             </RelatedList>
           </WrapperRight>
         </ActivityContainer>
       </Desktop>
       <Mobile>
-        <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+        <Back><BackForm /></Back>
         <ActivityMobileContainer>
           <h2>{text}</h2>
           <img src={vitaminsImages[activityId.id]} alt="" />
@@ -65,14 +60,12 @@ export default function ActivityPage() {
             {detail}
           </p>
           <RelatedMobileList>
-            연관 비타민
-            {intro.map(({
-            id, text,
-          }) => (
-            <RelatedMobileItem key={id}>
-              {text}
-            </RelatedMobileItem>
-          ))}
+            <p>연관 비타민</p>
+            {intro.map(({ id, text: relatedText }) => (
+              <RelatedMobileItem key={id}>
+                {relatedText}
+              </RelatedMobileItem>
+            ))}
           </RelatedMobileList>
         </ActivityMobileContainer>
       </Mobile>

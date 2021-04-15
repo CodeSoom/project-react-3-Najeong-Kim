@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
@@ -9,6 +9,8 @@ import { Desktop, Mobile } from '../styles/MediaQuery';
 import resultData from '../data/resultData';
 
 import { vitaminsImages } from '../assets/images';
+
+import BackForm from '../forms/BackForm';
 
 import Title from '../styles/Title';
 import Back from '../styles/Back';
@@ -21,16 +23,11 @@ const Container = styled.div({
 });
 
 export default function AllActivityPage() {
-  const history = useHistory();
-
-  function handleClick() {
-    return history.goBack();
-  }
   return (
     <div>
       <Desktop>
         <Container>
-          <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+          <Back><BackForm /></Back>
           <Title>All Vitamins</Title>
           <List>
             {resultData.map(({ text: { results } }) => (
@@ -49,7 +46,7 @@ export default function AllActivityPage() {
       </Desktop>
       <Mobile>
         <Container>
-          <Back><button type="button" data-testid="back" onClick={handleClick}><i className="fas fa-chevron-left" /></button></Back>
+          <Back><BackForm /></Back>
           <Title>All Vitamins</Title>
           <MobileList>
             {resultData.map(({ text: { results } }) => (

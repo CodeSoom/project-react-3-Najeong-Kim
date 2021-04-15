@@ -1,13 +1,19 @@
 import React from 'react';
 
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { MemoryRouter, Route } from 'react-router-dom';
 
+import { useMediaQuery } from 'react-responsive';
+
 import AllActivityPage from './AllActivityPage';
 
+jest.mock('react-responsive');
+
 describe('AllActivityPage', () => {
-  const handleClick = jest.fn();
+  beforeEach(() => {
+    useMediaQuery.mockImplementation(() => true);
+  });
 
   function renderAllActivityPage({ path }) {
     return render((
@@ -21,15 +27,5 @@ describe('AllActivityPage', () => {
     const { container } = renderAllActivityPage({ path: '/activities' });
 
     expect(container).toHaveTextContent('DIY');
-  });
-
-  context('clicks go back icon', () => {
-    it('listens go back event', () => {
-      const { getByTestId } = renderAllActivityPage({ path: '/activities' });
-
-      fireEvent.click(getByTestId('back'));
-
-      expect(handleClick).toBeCalled();
-    });
   });
 });

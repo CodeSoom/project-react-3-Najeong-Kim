@@ -4,7 +4,11 @@ import { render } from '@testing-library/react';
 
 import { useDispatch } from 'react-redux';
 
+import { useMediaQuery } from 'react-responsive';
+
 import ResultContainer, { calculateResult, selectResultCase } from './ResultContainer';
+
+jest.mock('react-responsive');
 
 describe('ResultContainer', () => {
   const dispatch = jest.fn();
@@ -13,6 +17,7 @@ describe('ResultContainer', () => {
     dispatch.mockClear();
 
     useDispatch.mockImplementation(() => dispatch);
+    useMediaQuery.mockImplementation(() => true);
 
     jest.clearAllMocks();
   });
@@ -27,13 +32,5 @@ describe('ResultContainer', () => {
 
   it('selects result case', () => {
     expect(selectResultCase(['A', 'A', 'A'])).toEqual(1);
-  });
-
-  it('renders ResultContainer', () => {
-    render(
-      <ResultContainer />,
-    );
-
-    expect(dispatch).toBeCalled();
   });
 });

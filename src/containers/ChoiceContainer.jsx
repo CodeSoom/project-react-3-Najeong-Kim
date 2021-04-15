@@ -4,17 +4,17 @@ import { useDispatch } from 'react-redux';
 
 import styled from '@emotion/styled';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import { selectChoice } from '../actions';
 
 import { choicesImages } from '../assets/images';
 
-import { Desktop, Mobile } from '../styles/MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery';
 
 import { Question, MobileQuestion } from '../styles/Question';
 import { ChoiceList, ChoiceMobileList } from '../styles/ChoiceList';
 import { ChoiceButton, MobileChoiceButton } from '../styles/ChoiceButton';
-
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Item = styled.li({
   margin: '5%',
@@ -43,7 +43,7 @@ export default function ChoiceContainer({
               >
                 <div>
                   <LazyLoadImage
-                    alt=''
+                    alt=""
                     src={choicesImages[(choiceId - 1) * 2 + choice.id]}
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function ChoiceContainer({
               >
                 <div>
                   <LazyLoadImage
-                    alt=''
+                    alt=""
                     src={choicesImages[(choiceId - 1) * 2 + choice.id]}
                   />
                 </div>
