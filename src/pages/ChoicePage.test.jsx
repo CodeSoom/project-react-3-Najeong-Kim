@@ -6,6 +6,8 @@ import { MemoryRouter, Route } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
+import { useMediaQuery } from 'react-responsive';
+
 import ChoicePage from './ChoicePage';
 
 const mockHistory = { push: jest.fn() };
@@ -17,11 +19,14 @@ jest.mock('react-router-dom', () => ({
   },
 }));
 
+jest.mock('react-responsive');
+
 describe('ChoicePage', () => {
   beforeEach(() => {
     const dispatch = jest.fn();
 
     useDispatch.mockImplementation(() => dispatch);
+    useMediaQuery.mockImplementation(() => true);
   });
 
   function renderChoicePage({ path }) {
@@ -34,9 +39,9 @@ describe('ChoicePage', () => {
 
   context('clicks a choice button when path is /choice/1', () => {
     it('listens click event', () => {
-      const { getByText } = renderChoicePage({ path: '/choice/1' });
+      const { queryAllByText } = renderChoicePage({ path: '/choice/1' });
 
-      fireEvent.click(getByText(/오랫동안/));
+      fireEvent.click(queryAllByText(/오랫동안/)[0]);
 
       expect((mockHistory.push)).toBeCalled();
     });
@@ -44,9 +49,9 @@ describe('ChoicePage', () => {
 
   context('clicks a choice button when path is /choice/9', () => {
     it('listens click event', () => {
-      const { getByText } = renderChoicePage({ path: '/choice/9' });
+      const { queryAllByText } = renderChoicePage({ path: '/choice/9' });
 
-      fireEvent.click(getByText(/인생은/));
+      fireEvent.click(queryAllByText(/인생은/)[0]);
 
       expect((mockHistory.push)).toBeCalledWith('/result');
     });

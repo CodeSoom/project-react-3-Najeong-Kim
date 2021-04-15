@@ -1,4 +1,10 @@
-import { selectChoice, selectResult } from './actions';
+import {
+  selectChoice,
+  selectResult,
+  clearSelects,
+  changeUserName,
+} from './actions';
+
 import reducer from './reducer';
 
 describe('reducer', () => {
@@ -39,6 +45,30 @@ describe('reducer', () => {
       const state = reducer(initialState, selectResult(1));
 
       expect(state.result.id).toEqual(1);
+    });
+  });
+
+  describe('clearSelects', () => {
+    it('clears selects', () => {
+      const initialState = {
+        selects: [1],
+      };
+
+      const state = reducer(initialState, clearSelects());
+
+      expect(state.selects).toHaveLength(0);
+    });
+  });
+
+  describe('changeUserName', () => {
+    it('changes user name', () => {
+      const initialState = {
+        userName: '',
+      };
+
+      const state = reducer(initialState, changeUserName({ name: 'userName', value: 'NaJeong' }));
+
+      expect(state.userName).toEqual('NaJeong');
     });
   });
 });

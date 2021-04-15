@@ -6,11 +6,9 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import { Desktop, Mobile } from '../styles/MediaQuery'
+import { Desktop, Mobile } from '../styles/MediaQuery';
 
-import { vitaminsImages } from '../assets/images';
-
-import { typesImages } from '../assets/images';
+import { vitaminsImages, typesImages } from '../assets/images';
 
 import { get } from '../utils';
 
@@ -72,11 +70,11 @@ export default function ResultContainer() {
           <img src={typesImages[answer?.id]} alt="" />
           <p>
             {userName}님의 유형은 {answer?.text?.type}입니다
-          <br />
+            <br />
             {answer?.text?.story}
             <br />
             {userName}님을 위한 비타민 Y가 제조되었습니다
-        </p>
+          </p>
         </Type>
         <List>
           {answer?.text?.results.map(({ id, activityId, text }) => (
@@ -96,11 +94,11 @@ export default function ResultContainer() {
           <img src={typesImages[answer?.id]} alt="" />
           <p>
             {userName}님의 유형은 {answer?.text?.type}입니다
-          <br />
+            <br />
             {answer?.text?.story}
             <br />
             {userName}님을 위한 비타민 Y가 제조되었습니다
-        </p>
+          </p>
         </MobileType>
         <MobileList>
           {answer?.text?.results.map(({ id, activityId, text }) => (
@@ -115,6 +113,6 @@ export default function ResultContainer() {
           ))}
         </MobileList>
       </Mobile>
-    </Container >
+    </Container>
   );
 }
