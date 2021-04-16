@@ -44,7 +44,7 @@ export default function App() {
       <Desktop>
         <Header>
           <span />
-          <h1>Vitamin Y</h1>
+          <h1>확인제발Vitamin Y</h1>
           <Link to="/" data-testid="home" onClick={handleClickClear}><i className="fas fa-home" /></Link>
         </Header>
         <Switch>
