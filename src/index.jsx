@@ -14,7 +14,7 @@ import store from './store';
 ReactDOM.render(
   (
     <Provider store={store}>
-      <BrowserRouter basename="/project-react-3-Najeong-Kim">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
