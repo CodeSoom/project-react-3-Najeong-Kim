@@ -75,7 +75,7 @@
     "moduleNameMapper": {
       "\\.(css|less|scss)$": "identity-obj-proxy",
       "\\.(jpg|jpeg|png|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    },
+    }
   },
-  "homepage": "./"
+  "homepage": "."
 }
