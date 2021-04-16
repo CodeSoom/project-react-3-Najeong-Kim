@@ -1,4 +1,4 @@
-# [Vitamin Y](vitamin-y.today){: target="_blank"}
+# [Vitamin Y](vitamin-y.today){:target="_blank"}
 당신의 비타민은 무엇인가요? 😊
 
 ## 서비스 소개
