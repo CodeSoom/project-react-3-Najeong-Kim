@@ -1,7 +1,5 @@
-# Vitamin Y
+# [Vitamin Y](vitamin-y.today)
 당신의 비타민은 무엇인가요? 😊
-아래의 링크에서 확인해보세요!
-https://codesoom.github.io/project-react-3-Najeong-Kim/
 
 ## 서비스 소개
 `Vitamin Y`는 성향에 맞는 활동을 추천해드립니다.
