@@ -7,6 +7,11 @@ const RelatedList = styled.ul({
   borderRadius: '10px',
   padding: '15px',
   fontSize: '25px',
+  '& span': {
+    backgroundColor: 'inherit',
+    padding: '5px 10px',
+    borderRadius: '5px',
+  },
 });
 
 const RelatedMobileList = styled.ul({

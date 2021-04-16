@@ -33,6 +33,7 @@ const WrapperRight = styled.div({
   justifyContent: 'center',
   margin: '5vh 0',
   padding: '15px',
+  paddingRight: '10vw',
   '& > p': {
     paddingLeft: '10px',
     color: '#323232',
