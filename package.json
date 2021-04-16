@@ -77,5 +77,5 @@
       "\\.(jpg|jpeg|png|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
   },
-  "homepage": "."
+  "homepage": "vitamin-y.today"
 }
