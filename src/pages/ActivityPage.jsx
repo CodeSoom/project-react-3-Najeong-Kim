@@ -43,7 +43,7 @@ export default function ActivityPage() {
               {detail}
             </p>
             <RelatedList>
-              <p>연관 비타민</p>
+              <span>연관 비타민</span>
               {intro.map(({ id, text: relatedText }) => (
                 <RelatedItem key={id}>{relatedText}</RelatedItem>
               ))}
@@ -60,7 +60,7 @@ export default function ActivityPage() {
             {detail}
           </p>
           <RelatedMobileList>
-            <p>연관 비타민</p>
+            <span>연관 비타민</span>
             {intro.map(({ id, text: relatedText }) => (
               <RelatedMobileItem key={id}>
                 {relatedText}
