@@ -6,18 +6,13 @@ import { fireEvent, render } from '@testing-library/react';
 
 import { useDispatch } from 'react-redux';
 
-import { useMediaQuery } from 'react-responsive';
-
 import App from './App';
-
-jest.mock('react-responsive');
 
 describe('App', () => {
   beforeEach(() => {
     const dispatch = jest.fn();
 
     useDispatch.mockImplementation(() => dispatch);
-    useMediaQuery.mockImplementation(() => true);
   });
 
   function renderApp({ path }) {

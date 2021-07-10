@@ -26,24 +26,6 @@ const wobbleHorBottom = keyframes`
 `;
 
 const VitaminButton = styled.div({
-  marginTop: '40px',
-  textAlign: 'center',
-  '& a': {
-    fontSize: '60px',
-    color: '#F2C94C',
-    textDecoration: 'none',
-    padding: '8px 15px',
-    borderRadius: '10px',
-    '& i': {
-      animation: `${wobbleHorBottom} 2.5s ease-in-out infinite both;`,
-      '&:hover': {
-        color: '#FFB61D',
-      },
-    },
-  },
-});
-
-const MobileVitaminButton = styled.div({
   marginTop: '10px',
   textAlign: 'center',
   '& a': {
@@ -61,4 +43,4 @@ const MobileVitaminButton = styled.div({
   },
 });
 
-export { VitaminButton, MobileVitaminButton };
+export default VitaminButton;

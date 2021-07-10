@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import { Desktop, Mobile } from '../styles/MediaQuery';
-
 import resultData from '../data/resultData';
 
 import { vitaminsImages } from '../assets/images';
@@ -11,10 +9,9 @@ import { vitaminsImages } from '../assets/images';
 import BackForm from '../forms/BackForm';
 
 import Back from '../styles/Back';
-import { ActivityContainer, ActivityMobileContainer } from '../styles/ActivityContainer';
-import { WrapperLeft, WrapperRight } from '../styles/Wrapper';
-import { RelatedList, RelatedMobileList } from '../styles/RelatedList';
-import { RelatedItem, RelatedMobileItem } from '../styles/RelatedItem';
+import ActivityContainer from '../styles/ActivityContainer';
+import RelatedList from '../styles/RelatedList';
+import RelatedItem from '../styles/RelatedItem';
 
 const ACTIVITY_COUNT = 6;
 
@@ -31,44 +28,22 @@ export default function ActivityPage() {
 
   return (
     <div>
-      <Desktop>
-        <Back><BackForm /></Back>
-        <ActivityContainer>
-          <WrapperLeft>
-            <h2>{text}</h2>
-            <div><img src={vitaminsImages[activityId.id]} alt="" /></div>
-          </WrapperLeft>
-          <WrapperRight>
-            <p>
-              {detail}
-            </p>
-            <RelatedList>
-              <span>연관 비타민</span>
-              {intro.map(({ id, text: relatedText }) => (
-                <RelatedItem key={id}>{relatedText}</RelatedItem>
-              ))}
-            </RelatedList>
-          </WrapperRight>
-        </ActivityContainer>
-      </Desktop>
-      <Mobile>
-        <Back><BackForm /></Back>
-        <ActivityMobileContainer>
-          <h2>{text}</h2>
-          <img src={vitaminsImages[activityId.id]} alt="" />
-          <p>
-            {detail}
-          </p>
-          <RelatedMobileList>
-            <span>연관 비타민</span>
-            {intro.map(({ id, text: relatedText }) => (
-              <RelatedMobileItem key={id}>
-                {relatedText}
-              </RelatedMobileItem>
-            ))}
-          </RelatedMobileList>
-        </ActivityMobileContainer>
-      </Mobile>
+      <Back><BackForm /></Back>
+      <ActivityContainer>
+        <h2>{text}</h2>
+        <img src={vitaminsImages[activityId.id]} alt="" />
+        <p>
+          {detail}
+        </p>
+        <RelatedList>
+          <span>연관 비타민</span>
+          {intro.map(({ id, text: relatedText }) => (
+            <RelatedItem key={id}>
+              {relatedText}
+            </RelatedItem>
+          ))}
+        </RelatedList>
+      </ActivityContainer>
     </div>
   );
 }
