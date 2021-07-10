@@ -4,8 +4,6 @@ import { render } from '@testing-library/react';
 
 import { useDispatch } from 'react-redux';
 
-import { useMediaQuery } from 'react-responsive';
-
 import ResultContainer, { calculateResult, selectResultCase } from './ResultContainer';
 
 jest.mock('react-responsive');
@@ -17,7 +15,6 @@ describe('ResultContainer', () => {
     dispatch.mockClear();
 
     useDispatch.mockImplementation(() => dispatch);
-    useMediaQuery.mockImplementation(() => true);
 
     jest.clearAllMocks();
   });

@@ -6,8 +6,6 @@ import { MemoryRouter, Route } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
-import { useMediaQuery } from 'react-responsive';
-
 import ChoicePage from './ChoicePage';
 
 const mockHistory = { push: jest.fn() };
@@ -19,14 +17,11 @@ jest.mock('react-router-dom', () => ({
   },
 }));
 
-jest.mock('react-responsive');
-
 describe('ChoicePage', () => {
   beforeEach(() => {
     const dispatch = jest.fn();
 
     useDispatch.mockImplementation(() => dispatch);
-    useMediaQuery.mockImplementation(() => true);
   });
 
   function renderChoicePage({ path }) {

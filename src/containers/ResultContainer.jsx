@@ -6,18 +6,16 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import { Desktop, Mobile } from '../styles/MediaQuery';
-
 import { vitaminsImages, typesImages } from '../assets/images';
 
 import { get } from '../utils';
 
 import { selectResult } from '../actions';
 
-import { Type, MobileType } from '../styles/Type';
-import { List, MobileList } from '../styles/List';
-import { Item, MobileItem } from '../styles/Item';
-import { ResultItem, MobileResultItem } from '../styles/ResultItem';
+import Type from '../styles/Type';
+import List from '../styles/List';
+import Item from '../styles/Item';
+import ResultItem from '../styles/ResultItem';
 
 const Container = styled.div({
   textAlign: 'center',
@@ -65,54 +63,28 @@ export default function ResultContainer() {
 
   return (
     <Container>
-      <Desktop>
-        <Type>
-          <img src={typesImages[answer?.id]} alt="" />
-          <p>
-            {userName}님의 유형은 {answer?.text?.type}입니다
-            <br />
-            {answer?.text?.story}
-            <br />
-            {userName}님을 위한 비타민 Y가 제조되었습니다
-          </p>
-        </Type>
-        <List>
-          {answer?.text?.results.map(({ id, activityId, text }) => (
-            <Item key={id}>
-              <ResultItem>
-                <Link to={`/activities/${activityId}`}>
-                  <img src={vitaminsImages[activityId]} alt="" />
-                  <span>{text}</span>
-                </Link>
-              </ResultItem>
-            </Item>
-          ))}
-        </List>
-      </Desktop>
-      <Mobile>
-        <MobileType>
-          <img src={typesImages[answer?.id]} alt="" />
-          <p>
-            {userName}님의 유형은 {answer?.text?.type}입니다
-            <br />
-            {answer?.text?.story}
-            <br />
-            {userName}님을 위한 비타민 Y가 제조되었습니다
-          </p>
-        </MobileType>
-        <MobileList>
-          {answer?.text?.results.map(({ id, activityId, text }) => (
-            <MobileItem key={id}>
-              <MobileResultItem>
-                <Link to={`/activities/${activityId}`}>
-                  <img src={vitaminsImages[activityId]} alt="" />
-                  <span>{text}</span>
-                </Link>
-              </MobileResultItem>
-            </MobileItem>
-          ))}
-        </MobileList>
-      </Mobile>
+      <Type>
+        <img src={typesImages[answer?.id]} alt="" />
+        <p>
+          {userName}님의 유형은 {answer?.text?.type}입니다
+          <br />
+          {answer?.text?.story}
+          <br />
+          {userName}님을 위한 비타민 Y가 제조되었습니다
+        </p>
+      </Type>
+      <List>
+        {answer?.text?.results.map(({ id, activityId, text }) => (
+          <Item key={id}>
+            <ResultItem>
+              <Link to={`/activities/${activityId}`}>
+                <img src={vitaminsImages[activityId]} alt="" />
+                <span>{text}</span>
+              </Link>
+            </ResultItem>
+          </Item>
+        ))}
+      </List>
     </Container>
   );
 }

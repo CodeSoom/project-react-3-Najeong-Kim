@@ -10,8 +10,6 @@ import { useDispatch } from 'react-redux';
 
 import styled from '@emotion/styled';
 
-import { Desktop, Mobile } from './styles/MediaQuery';
-
 import { clearSelects } from './actions';
 
 import { GlobalStyle } from './styles/globalStyle';
@@ -41,36 +39,19 @@ export default function App() {
 
   return (
     <Container>
-      <Desktop>
-        <Header>
-          <span />
-          <h1>Vitamin Y</h1>
-          <Link to="/" data-testid="home" onClick={handleClickClear}><i className="fas fa-home" /></Link>
-        </Header>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/intro" component={IntroPage} />
-          <Route exact path="/choice/:id" component={ChoicePage} />
-          <Route exact path="/result" component={ResultPage} />
-          <Route exact path="/activities/:id" component={ActivityPage} />
-          <Route exact path="/activities" component={AllActivityPage} />
-        </Switch>
-      </Desktop>
-      <Mobile>
-        <Header>
-          <span />
-          <h1>Vitamin Y</h1>
-          <Link to="/" data-testid="home" onClick={handleClickClear}><i className="fas fa-home" /></Link>
-        </Header>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/intro" component={IntroPage} />
-          <Route exact path="/choice/:id" component={ChoicePage} />
-          <Route exact path="/result" component={ResultPage} />
-          <Route exact path="/activities/:id" component={ActivityPage} />
-          <Route exact path="/activities" component={AllActivityPage} />
-        </Switch>
-      </Mobile>
+      <Header>
+        <span />
+        <h1>Vitamin Y</h1>
+        <Link to="/" data-testid="home" onClick={handleClickClear}><i className="fas fa-home" /></Link>
+      </Header>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/intro" component={IntroPage} />
+        <Route exact path="/choice/:id" component={ChoicePage} />
+        <Route exact path="/result" component={ResultPage} />
+        <Route exact path="/activities/:id" component={ActivityPage} />
+        <Route exact path="/activities" component={AllActivityPage} />
+      </Switch>
       <GlobalStyle />
     </Container>
   );

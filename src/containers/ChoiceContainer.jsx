@@ -10,11 +10,9 @@ import { selectChoice } from '../actions';
 
 import { choicesImages } from '../assets/images';
 
-import { Desktop, Mobile } from '../styles/MediaQuery';
-
-import { Question, MobileQuestion } from '../styles/Question';
-import { ChoiceList, ChoiceMobileList } from '../styles/ChoiceList';
-import { ChoiceButton, MobileChoiceButton } from '../styles/ChoiceButton';
+import Question from '../styles/Question';
+import ChoiceList from '../styles/ChoiceList';
+import ChoiceButton from '../styles/ChoiceButton';
 
 const Item = styled.li({
   margin: '5%',
@@ -32,48 +30,25 @@ export default function ChoiceContainer({
 
   return (
     <div>
-      <Desktop>
-        <Question>{question}</Question>
-        <ChoiceList>
-          {choices.map((choice) => (
-            <Item key={choice.id}>
-              <ChoiceButton
-                type="button"
-                onClick={() => handleClick(choice.id)}
-              >
-                <div>
-                  <LazyLoadImage
-                    alt=""
-                    src={choicesImages[(choiceId - 1) * 2 + choice.id]}
-                  />
-                </div>
-                <p>{choice.text}</p>
-              </ChoiceButton>
-            </Item>
-          ))}
-        </ChoiceList>
-      </Desktop>
-      <Mobile>
-        <MobileQuestion>{question}</MobileQuestion>
-        <ChoiceMobileList>
-          {choices.map((choice) => (
-            <Item key={choice.id}>
-              <MobileChoiceButton
-                type="button"
-                onClick={() => handleClick(choice.id)}
-              >
-                <div>
-                  <LazyLoadImage
-                    alt=""
-                    src={choicesImages[(choiceId - 1) * 2 + choice.id]}
-                  />
-                </div>
-                <p>{choice.text}</p>
-              </MobileChoiceButton>
-            </Item>
-          ))}
-        </ChoiceMobileList>
-      </Mobile>
+      <Question>{question}</Question>
+      <ChoiceList>
+        {choices.map((choice) => (
+          <Item key={choice.id}>
+            <ChoiceButton
+              type="button"
+              onClick={() => handleClick(choice.id)}
+            >
+              <div>
+                <LazyLoadImage
+                  alt=""
+                  src={choicesImages[(choiceId - 1) * 2 + choice.id]}
+                />
+              </div>
+              <p>{choice.text}</p>
+            </ChoiceButton>
+          </Item>
+        ))}
+      </ChoiceList>
     </div>
   );
 }

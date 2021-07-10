@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 
 const ActivityContainer = styled.div({
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)',
-  height: '70vh',
-});
-
-const ActivityMobileContainer = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'start',
@@ -30,4 +24,4 @@ const ActivityMobileContainer = styled.div({
   },
 });
 
-export { ActivityContainer, ActivityMobileContainer };
+export default ActivityContainer;
